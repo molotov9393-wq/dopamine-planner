@@ -1,0 +1,6 @@
+const BASE=new URL('.',self.registration.scope).pathname;
+const CACHE='planner-shell-v29';
+const CORE=['','index.html','style.css?v=7','illustrations.css?v=16','app.js?v=24','manifest.webmanifest','flower.svg','assets/doodles/study-work.png?v=8',...Array.from({length:12},(_,i)=>`assets/doodles/doodle-${i}.png?v=7`),...Array.from({length:7},(_,i)=>`assets/doodles/doodle-${i+12}.png?v=1`)].map(path=>BASE+path);
+self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(CORE))));
+self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE).map(key=>caches.delete(key))))));
+self.addEventListener('fetch',event=>{if(event.request.method!=='GET')return;event.respondWith(caches.match(event.request).then(cached=>cached||fetch(event.request).then(response=>{if(response.ok&&new URL(event.request.url).origin===location.origin){const copy=response.clone();caches.open(CACHE).then(cache=>cache.put(event.request,copy))}return response}).catch(()=>caches.match(BASE+'index.html'))))});

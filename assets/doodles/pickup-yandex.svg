@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <path d="M18 48 24 34l72-1 7 15v49H18z" fill="#fff7ef" stroke="#59483f" stroke-width="2.7" stroke-linejoin="round"/>
+  <path d="m20 48 5-13 70-1 7 14-8 8-9-8-9 8-9-8-9 8-9-8-9 8z" fill="#f1ce61" stroke="#59483f" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M29 40h62v19H29z" fill="#f3d45f" stroke="#59483f" stroke-width="2.3"/>
+  <text x="43" y="55" text-anchor="middle" fill="#d94b43" font-family="Trebuchet MS,Arial,sans-serif" font-size="18" font-weight="700">Я</text>
+  <text x="69" y="54" text-anchor="middle" fill="#443a33" font-family="Trebuchet MS,Arial,sans-serif" font-size="9" font-weight="700">МАРКЕТ</text>
+  <path d="M28 66h33v31H28z" fill="#fff1c7" stroke="#59483f" stroke-width="2.2"/><path d="M39 66v31m11-31v31" stroke="#d9b74f" stroke-width="1.5"/>
+  <path d="M69 73h23v24H69z" fill="#e5bc65" stroke="#59483f" stroke-width="2.2"/><path d="m69 80 12-7 11 7M81 80v17" stroke="#a77751" stroke-width="1.7" stroke-linejoin="round"/>
+  <path d="M11 83c4-5 8-5 11 0m77-15 4-7 4 7 7 2-7 3-3 7-3-7-7-3z" stroke="#d8819a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M33 101h59" stroke="#59483f" stroke-width="2.4" stroke-linecap="round"/><path d="m98 27 2-6m7 10 6-2" stroke="#e7bb57" stroke-width="2.2" stroke-linecap="round"/>
+</svg>

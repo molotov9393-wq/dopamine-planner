@@ -5,7 +5,7 @@
 
 .welcome-screen{position:relative;min-height:calc(100dvh - 105px);display:flex;flex-direction:column;justify-content:center;padding:28px 16px 30px 118px;isolation:isolate;overflow:hidden}.welcome-screen:before{content:"";position:absolute;z-index:-1;inset:8px 3px 20px;border:1px solid #dfcabe;border-radius:46% 44% 42% 45% / 4% 5% 4% 4%;background:linear-gradient(145deg,#fff9f1b8,#f4e4db52);transform:rotate(-1deg)}.welcome-copy{position:relative;z-index:1}.welcome-kicker{font:21px 'Marck Script',cursive;color:var(--green);line-height:1.1;margin-bottom:15px;transform:rotate(-5deg);transform-origin:left center}.welcome-screen h1{font:36px 'Marck Script',cursive;line-height:1.07;margin:0 0 19px;color:#42352f;transform:rotate(-2deg);white-space:nowrap}.welcome-screen h1 .heart{font-family:Comfortaa,sans-serif;font-size:24px;color:var(--pink)}.welcome-copy p{font:23px/1.12 'Marck Script',cursive;color:#554941;max-width:270px;margin:0 0 14px;transform:rotate(-1deg)}.welcome-motto{font:22px/1.05 'Marck Script',cursive;text-align:center;color:#594c44;transform:rotate(-4deg);margin:15px 5px 0 0}.welcome-flowers{position:absolute;left:0;top:17%;bottom:19%;width:120px}.welcome-flowers .art{position:absolute;object-fit:contain;filter:drop-shadow(1px 2px 1px #58483222)}.welcome-flowers .welcome-stem{left:-18px;bottom:0;width:118px;height:210px;transform:rotate(-7deg)}.welcome-flowers .welcome-flower{left:30px;top:19%;width:83px;height:98px;transform:rotate(7deg)}.welcome-cat{position:absolute;width:103px;height:88px;right:6px;bottom:15%;transform:rotate(5deg)}.welcome-heart{position:absolute;font:34px 'Marck Script',cursive;color:var(--pink)}.heart-a{right:35px;top:12%;transform:rotate(12deg)}.heart-b{right:12px;bottom:31%;font-size:20px;transform:rotate(-12deg)}.welcome-sparkle{position:absolute;right:36px;bottom:30%;font:36px 'Marck Script',cursive;color:#d2a847;transform:rotate(14deg)}.welcome-start{position:relative;z-index:2;align-self:center;width:min(240px,90%)!important;margin:34px 0 0 -10px;padding:14px 20px!important;background:#df93a8!important;color:#573e43!important;font-family:'Marck Script',cursive!important;font-size:22px!important;box-shadow:0 5px 0 #bc71834a,inset 0 2px #fff8!important;transform:rotate(-2deg);border:1px solid #bf77894d!important}.bottom-nav[hidden],.topbar[hidden]{display:none}@media(max-height:700px){.welcome-screen{min-height:calc(100dvh - 80px);padding-top:15px;padding-bottom:15px}.welcome-flowers{top:13%;bottom:23%}.welcome-flowers .welcome-stem{height:165px}.welcome-copy p{font-size:20px;line-height:1.08}.welcome-screen h1{font-size:32px}.welcome-start{margin-top:20px}.welcome-cat{bottom:11%}}
 
-.setting[data-action="reminders"]{width:100%;border:0;background:transparent;text-align:left;font:12px Comfortaa,sans-serif;color:var(--ink);cursor:pointer}.reminder-card h3{margin-bottom:5px}.reminder-switch{display:flex;align-items:center;gap:10px;padding:12px 0;font-size:13px}.reminder-switch input{accent-color:#c7778e;width:20px;height:20px}.reminder-label{display:block;margin:10px 0 6px;color:var(--muted);font-size:11px}.reminder-input{width:100%;min-height:44px;border:1px solid var(--line);border-radius:12px;padding:10px 12px;background:#fff9f2;color:var(--ink);font:14px Comfortaa,sans-serif;margin-bottom:8px}.reminder-card>.btn{margin-top:8px}.reminder-card>.btn:disabled{opacity:.55}.reminder-note{font-size:12px;line-height:1.65;color:var(--muted)}.reminder-note b{color:var(--ink)}.reminder-note p{margin:8px 0 12px}.reminder-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--line);font-size:12px}.reminder-row:last-child{border-bottom:0}.reminder-row small{display:block;margin-top:5px;color:var(--muted)}.reminder-delete{border:0;background:#f3d9df;border-radius:50%;width:30px;height:30px;color:#8e4a61;font-size:20px}.reminder-permission{margin-top:6px}
+.setting[data-action="reminders"],.setting[data-action="toggle-sound"]{width:100%;border:0;background:transparent;text-align:left;font:12px Comfortaa,sans-serif;color:var(--ink);cursor:pointer}.setting[data-action="toggle-sound"]{appearance:none;display:flex;align-items:center;justify-content:space-between;padding:13px 0;border:0;border-bottom:1px solid var(--line);background:transparent;text-align:left;font:12px Comfortaa,sans-serif;color:var(--ink);cursor:pointer}.setting[data-action="toggle-sound"]:focus-visible{outline:2px solid var(--pink);outline-offset:3px}.sound-switch{width:36px;height:22px;flex:none;border-radius:11px;background:#d8ccc2;padding:3px;transition:background .2s}.sound-switch i{display:block;width:16px;height:16px;border-radius:50%;background:var(--paper2);box-shadow:0 1px 3px #40383233;transition:transform .2s}.sound-switch.is-on{background:#d8819a}.sound-switch.is-on i{transform:translateX(14px)}.reminder-card h3{margin-bottom:5px}.reminder-switch{display:flex;align-items:center;gap:10px;padding:12px 0;font-size:13px}.reminder-switch input{accent-color:#c7778e;width:20px;height:20px}.reminder-label{display:block;margin:10px 0 6px;color:var(--muted);font-size:11px}.reminder-input{width:100%;min-height:44px;border:1px solid var(--line);border-radius:12px;padding:10px 12px;background:#fff9f2;color:var(--ink);font:14px Comfortaa,sans-serif;margin-bottom:8px}.reminder-card>.btn{margin-top:8px}.reminder-card>.btn:disabled{opacity:.55}.reminder-note{font-size:12px;line-height:1.65;color:var(--muted)}.reminder-note b{color:var(--ink)}.reminder-note p{margin:8px 0 12px}.reminder-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--line);font-size:12px}.reminder-row:last-child{border-bottom:0}.reminder-row small{display:block;margin-top:5px;color:var(--muted)}.reminder-delete{border:0;background:#f3d9df;border-radius:50%;width:30px;height:30px;color:#8e4a61;font-size:20px}.reminder-permission{margin-top:6px}
 .task{grid-template-columns:24px 38px minmax(0,1fr) auto 30px;gap:7px}.task-reminder{display:grid;place-items:center;width:29px;height:32px;padding:2px;border:1px solid transparent;border-radius:13px;background:transparent;color:#9d786b;cursor:pointer;transition:background .16s,transform .16s}.task-reminder svg{width:25px;height:27px;overflow:visible}.task-reminder svg path{fill:#f5dfcc;stroke:#806b5f;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round}.task-reminder svg .bell-heart{fill:#d9869e;stroke:#a65d73;stroke-width:1.1}.task-reminder:active{transform:scale(.9)}.task-reminder.is-set{background:#f7e3e8;border-color:#e7bdc8;color:#a74f6c}.task-reminder.is-set svg path:first-child{fill:#edc4ce}.task-reminder-modal{position:relative;padding-top:25px}.reminder-modal-close{position:absolute;right:18px;top:14px;width:32px;height:32px;border:0;border-radius:50%;background:#f3dce1;color:#8e4a61;font-size:23px;line-height:1}.reminder-modal-art{height:63px;display:flex;align-items:center;justify-content:center;position:relative}.reminder-modal-art .task-modal-art{width:58px;height:58px}.reminder-modal-art>span{position:absolute;top:0;right:calc(50% - 40px);color:#cd7890;font-size:19px;transform:rotate(12deg)}.task-reminder-modal h2{text-align:center;margin:2px 0 4px}.reminder-task-title{text-align:center;font:22px 'Marck Script',cursive;color:#65564c;margin:0 0 13px}.reminder-remove-in-modal{display:block;margin:12px auto 0;background:#f2e4dc}
 
 
@@ -17,3 +17,143 @@ main{min-height:calc(100dvh - 87px)}.welcome-screen{min-height:calc(100dvh - 82p
 #app.page-enter{animation:planner-page-in .34s cubic-bezier(.2,.7,.25,1) both}@keyframes planner-page-in{from{opacity:0;transform:translateY(12px) scale(.992)}to{opacity:1;transform:translateY(0) scale(1)}}.modal-backdrop{animation:planner-fade-in .2s ease-out both}.modal{animation:planner-sheet-in .34s cubic-bezier(.2,.8,.25,1) both}@keyframes planner-fade-in{from{opacity:0}to{opacity:1}}@keyframes planner-sheet-in{from{opacity:.7;transform:translateY(20px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}.art-choice{position:relative;transition:transform .18s ease,background .18s,border-color .18s}.art-choice:active{transform:scale(.94)}.art-choice.selected{animation:planner-choice .35s cubic-bezier(.2,.8,.25,1)}.art-choice.selected:after{content:'✧';position:absolute;top:-5px;right:3px;color:#d3a544;font:17px 'Marck Script',cursive;pointer-events:none;animation:planner-sparkle .5s ease-out both}@keyframes planner-choice{0%{transform:scale(.92)}55%{transform:scale(1.06)}100%{transform:scale(1)}}@keyframes planner-sparkle{0%{opacity:0;transform:scale(.4) rotate(-35deg)}35%{opacity:1;transform:scale(1.25) rotate(12deg)}100%{opacity:0;transform:translate(4px,-6px) scale(.8) rotate(35deg)}}.task{position:relative}.task.celebrating .task-art{animation:planner-win .62s cubic-bezier(.2,.8,.25,1)}.task.celebrating .check{animation:planner-check .34s ease-out}.task.celebrating .task-reward{animation:planner-reward .62s ease-out}.task.celebrating:after{content:'♡  ✧';position:absolute;left:29px;top:0;color:#d9869e;font:15px 'Marck Script',cursive;pointer-events:none;animation:planner-hearts .72s ease-out both}@keyframes planner-win{0%{transform:scale(1)}38%{transform:translateY(-5px) rotate(-7deg) scale(1.17)}68%{transform:translateY(1px) rotate(4deg) scale(.98)}100%{transform:none}}@keyframes planner-check{0%{transform:scale(.72)}70%{transform:scale(1.18)}100%{transform:scale(1)}}@keyframes planner-reward{0%{transform:translateY(0)}45%{transform:translateY(-4px);color:#b65e78}100%{transform:translateY(0)}}@keyframes planner-hearts{0%{opacity:0;transform:translateY(4px) scale(.6)}30%{opacity:1}100%{opacity:0;transform:translateY(-15px) scale(1.08)}}.calendar-day{transition:transform .16s,background .18s,border-color .18s}.calendar-day:active{transform:scale(.88)}.calendar-day.selected{animation:planner-choice .28s ease-out}.check,.btn{transition:transform .16s,filter .16s}.btn:active{transform:scale(.975);filter:saturate(1.12)}.setting[data-action='toggle-motion']{width:100%;border:0;background:transparent;text-align:left;font:12px Comfortaa,sans-serif;color:var(--ink);cursor:pointer}.reduce-motion *,body.reduce-motion *:before,body.reduce-motion *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 
 .reward.celebrating{position:relative;animation:planner-reward-card .85s cubic-bezier(.2,.8,.25,1)}.reward.celebrating .reward-art{animation:planner-win .62s cubic-bezier(.2,.8,.25,1)}.reward.celebrating:after{content:'♡　✧　♡';position:absolute;top:7px;left:0;right:0;color:#cc7790;font:18px 'Marck Script',cursive;pointer-events:none;animation:planner-reward-sparkle 1.15s ease-out both}.calendar-day.selected:after{content:'♡';position:absolute;right:-2px;top:-5px;color:#c8778e;font:11px 'Marck Script',cursive;pointer-events:none;animation:planner-calendar-heart .6s ease-out both}@keyframes planner-reward-card{0%{transform:scale(1);box-shadow:var(--shadow)}28%{transform:scale(1.035);box-shadow:0 0 0 4px #f1c9d5,0 9px 24px #c77a8c24}62%{transform:scale(.99);box-shadow:0 0 0 2px #f4dce2,0 9px 24px #c77a8c18}100%{transform:scale(1);box-shadow:var(--shadow)}}@keyframes planner-reward-sparkle{0%{opacity:0;transform:translateY(9px) scale(.65)}20%{opacity:1}80%{opacity:1}100%{opacity:0;transform:translateY(-24px) scale(1.15)}}@keyframes planner-calendar-heart{0%{opacity:0;transform:scale(.4) rotate(-15deg)}45%{opacity:1;transform:scale(1.2) rotate(8deg)}100%{opacity:0;transform:translateY(-5px) scale(.8) rotate(15deg)}}
+body.modal-open{overflow:hidden;overscroll-behavior:none}
+#modal-root:has(.modal-backdrop){position:fixed;z-index:10;inset:0;overflow:hidden;overscroll-behavior:contain}
+#modal-root .modal-backdrop{overflow:hidden;overscroll-behavior:contain}
+#modal-root .modal{max-height:94dvh;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:none;background:var(--paper);padding-bottom:calc(20px + env(safe-area-inset-bottom))}
+#modal-root .modal::-webkit-scrollbar{display:none}
+#modal-root .art-picker{grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}
+#modal-root .art-choice{min-height:64px;padding:3px 2px}
+#modal-root .art-choice .art{width:38px;height:38px}
+@media(max-width:359px){#modal-root .art-picker{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.art-sprite{background-image:url('./assets/doodles/doodle-sheet-extra.png?v=1');background-repeat:no-repeat;background-size:400% 300%;background-position:var(--sprite-x) var(--sprite-y)}
+.art-picker .pickup-art{width:44px;height:44px}
+.art-sprite-selfcare{background-image:url('./assets/doodles/doodle-sheet-selfcare.png?v=1');background-repeat:no-repeat;background-size:400% 200%;background-position:var(--sprite-x) var(--sprite-y)}
+/* Give the illustrations room to read clearly in the mobile task picker. */
+#modal-root .art-picker{grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+#modal-root .art-choice{min-height:86px;padding:5px 3px;gap:3px}
+#modal-root .art-choice .art{width:52px;height:52px}
+#modal-root .art-choice .art-choice-label{font-size:10px;line-height:1.2;min-height:24px}
+#modal-root .art-picker .pickup-art{width:52px;height:52px}
+@media(min-width:760px){#modal-root .art-picker{grid-template-columns:repeat(5,minmax(0,1fr))}}
+@media(max-width:359px){#modal-root .art-picker{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+/* A small hand-painted garden that grows with the planner's dopamine points. */
+.garden-balance{display:flex;align-items:center;justify-content:space-between;padding:2px 3px 12px;color:#77645a;font-size:12px}
+.garden-balance>span{display:flex;align-items:center;gap:7px}
+.garden-balance .garden-heart{width:25px;height:25px;object-fit:contain}
+.garden-balance strong{font-size:18px;color:#a74f6c}
+.garden-balance strong b{font-size:16px}
+.garden-scene{position:relative;overflow:hidden;min-height:300px;border:1px solid #d8cabc;border-radius:48% 48% 17px 17px / 9% 9% 17px 17px;background:linear-gradient(#f7e8df 0 43%,#e8efd9 43% 100%);box-shadow:0 8px 24px #604c3512}
+.garden-sky{height:112px;position:relative;color:#d5a54d}
+.garden-sky span{position:absolute;font:24px 'Marck Script',cursive}
+.garden-sky span:first-child{top:24px;left:20%}.garden-sky span:nth-child(2){top:24px;right:17%;color:#dbb95e}.garden-sky span:last-child{top:54px;right:29%;color:#d8819a}
+.garden-ground{position:absolute;inset:105px 0 43px;overflow:hidden;background:radial-gradient(ellipse at 50% 2%,#e2edcf 0,#dbe8cc 60%,#d3e1c3 100%)}
+.garden-ground:before,.garden-ground:after{content:'';position:absolute;width:85px;height:110px;bottom:-53px;border-radius:50%;background:#b6c99f88;transform:rotate(-14deg)}
+.garden-ground:before{left:-24px}.garden-ground:after{right:-25px;bottom:-60px;transform:rotate(20deg)}
+.garden-path{position:absolute;width:34%;height:190px;left:33%;top:5px;border-radius:50% 50% 0 0;background:#e9d5bd;opacity:.58;transform:perspective(100px) rotateX(-5deg)}
+.garden-empty{position:absolute;inset:5px 0 0;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:1;text-align:center;color:#706252}
+.garden-empty .empty-flower{width:84px;height:84px;object-fit:contain;filter:drop-shadow(1px 3px 2px #53452620)}
+.garden-empty .hand{font-size:21px;margin:4px 0}
+.garden-empty small{font-size:10px;color:#6e795e}
+.garden-plant{position:absolute;z-index:2;display:flex;flex-direction:column;align-items:center;width:95px;color:#526246;font:10px Comfortaa,sans-serif;text-align:center;animation:garden-sprout .55s cubic-bezier(.2,.8,.25,1) both}
+.garden-plant .garden-doodle{width:74px;height:74px;object-fit:contain;filter:drop-shadow(1px 3px 2px #53452622)}
+.garden-plant span{margin-top:-2px;padding:3px 6px;border-radius:12px;background:#f8f1e2bd}
+.plant-0{left:8%;bottom:8px}.plant-1{left:37%;bottom:29px}.plant-2{right:5%;bottom:3px}.plant-3{left:20%;bottom:89px}.plant-4{right:20%;bottom:89px}
+.garden-caption{position:absolute;bottom:7px;z-index:3;width:100%;text-align:center;color:#655449;font-size:18px}
+.garden-shop-title{margin:19px 0 4px}
+.garden-shop{border-top:1px solid var(--line)}
+.garden-shop-item{display:flex;align-items:center;gap:10px;padding:9px 2px;border-bottom:1px solid #e5d8cc}
+.garden-shop-item .shop-doodle{width:48px;height:48px;flex:0 0 48px;object-fit:contain}
+.garden-item-copy{display:flex;flex:1;min-width:0;flex-direction:column;gap:4px}
+.garden-item-copy strong{font-size:11px;color:#51443b}
+.garden-item-copy small{font-size:9px;line-height:1.35;color:#75675c}
+.garden-buy{min-width:76px;padding:8px 9px;border:1px solid #deb7c1;border-radius:18px;background:#f3dce2;color:#80505a;font:10px Comfortaa,sans-serif;white-space:nowrap;cursor:pointer;transition:transform .16s,background .16s}
+.garden-buy:not(:disabled):active{transform:scale(.94)}
+.garden-buy:disabled{border-color:#ddd4c9;background:#eee8df;color:#8b8178;cursor:default}
+.garden-shop-item.planted .shop-doodle{filter:saturate(.8)}
+.garden-footnote{margin:14px 2px 3px;color:#73655c;font-size:10px;line-height:1.6}
+@keyframes garden-sprout{from{opacity:0;transform:translateY(9px) scale(.84)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media(max-width:365px){.garden-plant{width:76px}.garden-plant .garden-doodle{width:62px;height:62px}.plant-1{left:38%}.plant-2{right:3%}.plant-3{left:15%}.plant-4{right:15%}.garden-shop-item{gap:7px}.garden-buy{min-width:68px;padding:7px 7px}}
+@media(prefers-reduced-motion:reduce){.garden-plant{animation:none}}
+
+/* A collectible album of hand-painted farm friends. */
+.collection-welcome{position:relative;margin:0 0 17px;padding:19px 15px 14px;border:1px solid #dfcfc2;border-radius:21px;background:linear-gradient(145deg,#fff9f2,#f4e5dd);box-shadow:0 8px 23px #634c3b12;overflow:hidden}.collection-garland{text-align:center;color:#c87990;font:19px 'Marck Script',cursive;letter-spacing:3px}.collection-welcome p{max-width:300px;margin:6px auto 13px;color:#64574d;font:18px/1.35 'Marck Script',cursive;text-align:center}.collection-count{padding:9px 10px;border:1px solid #e4d5c9;border-radius:15px;background:#fffaf4a8;color:#796c61;font-size:10px;text-align:center}.collection-count b{color:#a85872;font-size:15px}.collection-count span{color:#d88ba0}.collection-heading{display:flex;align-items:baseline;justify-content:space-between;gap:7px;margin:18px 1px 8px}.collection-heading h3{margin:0}.collection-heading .sub{font-size:9px;white-space:nowrap}.animal-collection{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.animal-card{position:relative;display:flex;min-width:0;flex-direction:column;overflow:hidden;padding:8px;border:1px solid #ddcbbd;border-radius:19px;background:#fff9f18a;box-shadow:0 5px 15px #5c483512;animation:animal-card-in .4s both}.animal-card:nth-child(2){animation-delay:.05s}.animal-card:nth-child(3){animation-delay:.1s}.animal-card:nth-child(4){animation-delay:.15s}.animal-card:before{content:'♡';position:absolute;z-index:1;top:7px;right:10px;color:#cf8498;font:18px 'Marck Script',cursive}.animal-card>.animal-doodle{display:block;position:relative;width:99px;height:132px;margin:0 auto;flex:none;background-image:url('./assets/doodles/farm-animals-v1.png');background-repeat:no-repeat;background-size:400% 100%;background-position:var(--animal-x) 50%;filter:drop-shadow(0 4px 3px #55442a20);transition:transform .25s,filter .25s}.animal-card>img.animal-doodle{object-fit:contain;background:none}.animal-card.is-open:active>.animal-doodle{transform:scale(1.06) rotate(-2deg)}.animal-card-copy{display:flex;flex:1;flex-direction:column;gap:4px;padding:2px 3px 8px}.animal-card-kind{color:#a8777c;font:13px 'Marck Script',cursive}.animal-card-copy strong{color:#51453e;font-size:12px;line-height:1.35}.animal-card-copy small{min-height:39px;color:#776a60;font-size:9px;line-height:1.5}.animal-fact{display:grid;gap:5px;margin-top:4px;padding:8px 7px;border:1px dashed #dfc9c5;border-radius:12px;background:#fffaf4a8}.animal-fact>span{color:#aa6a7d;font:13px 'Marck Script',cursive}.animal-fact p{margin:0;color:#68584f;font-size:9px;line-height:1.5}.animal-fact a{color:#a45b70;font-size:8px;line-height:1.4;text-decoration:underline;text-underline-offset:2px}.animal-action{width:100%;min-height:36px;padding:7px 5px;border:1px solid #dfb5c0;border-radius:16px;background:#f2dce1;color:#80505a;font:10px Comfortaa,sans-serif;cursor:pointer;transition:transform .16s,background .16s}.animal-action:not(:disabled):active{transform:scale(.96)}.animal-action:disabled{border-color:#e1d8cf;background:#f0ebe5;color:#a69b91;cursor:default}.animal-info-button{background:#f8e9dc;border-color:#e5cfb8;color:#736044}.collection-footnote{margin:14px 2px 2px;color:#796b60;font:16px/1.4 'Marck Script',cursive;text-align:center}.animal-modal-backdrop{align-items:flex-end}.animal-detail{position:relative;text-align:center;max-height:92dvh;overflow:auto}.animal-detail>.animal-doodle{display:block;width:123px;height:164px;margin:2px auto 8px;background:url('./assets/doodles/farm-animals-v1.png') no-repeat;background-size:400% 100%;background-position:var(--animal-x) 50%;filter:drop-shadow(0 6px 4px #55442a24);animation:animal-reveal .48s cubic-bezier(.2,.8,.25,1) both}.animal-detail-kind{color:#a8777c;font:17px 'Marck Script',cursive}.animal-detail h2{margin:2px 0 10px}.animal-detail p{margin:0 2px 14px;color:#64574d;font:18px/1.5 'Marck Script',cursive}.animal-secret{display:grid;gap:6px;margin:0 0 17px;padding:13px;border:1px dashed #d8a4b0;border-radius:17px;background:#fff8f0}.animal-secret span{color:#a8777c;font:14px 'Marck Script',cursive}.animal-secret strong{color:#68584f;font-size:11px;font-weight:500;line-height:1.5}.animal-secret a{color:#a45b70;font-size:9px;line-height:1.4;text-decoration:underline;text-underline-offset:2px}.animal-detail .btn{width:100%}.animal-detail .reminder-modal-close{z-index:2}
+.mystery-gift{position:relative;display:grid;place-items:center;width:100%;height:105px;flex:none;filter:drop-shadow(0 4px 3px #55442a20);animation:mystery-arrive .55s cubic-bezier(.2,.8,.25,1) both}.mystery-gift svg{width:116px;height:104px;overflow:visible}.mystery-gift i{position:absolute;top:49%;left:52%;display:grid;place-items:center;width:24px;height:24px;border:1px solid #d7a0aa;border-radius:50%;background:#fff5e9;color:#ad6479;font:18px 'Marck Script',cursive;font-style:normal;transform:translate(-50%,-50%)}
+@keyframes animal-card-in{from{opacity:0;transform:translateY(8px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}@keyframes animal-reveal{0%{opacity:0;transform:translateY(10px) scale(.8) rotate(-5deg)}75%{transform:translateY(-2px) scale(1.04) rotate(2deg)}100%{opacity:1;transform:translateY(0) scale(1) rotate(0)}}
+@media(max-width:365px){.animal-collection{gap:7px}.animal-card{padding:6px}.animal-card>.animal-doodle{width:87px;height:116px}.mystery-gift{height:91px}.mystery-gift svg{width:103px;height:94px}.animal-card-copy small{font-size:8px}.animal-fact p{font-size:8px}.animal-fact a{font-size:7px}.collection-heading .sub{font-size:8px}}
+@media(prefers-reduced-motion:reduce){.animal-card,.animal-detail>.animal-doodle{animation:none!important}}
+@keyframes mystery-arrive{from{opacity:.6;transform:translateY(6px) scale(.9)}to{opacity:1;transform:translateY(0) scale(1)}}
+
+
+/* Phone-first refinements: readable collection cards and reliable thumb targets. */
+@media(max-width:600px){
+ body{font-size:15px;background:var(--paper)}
+ .app-shell{width:100%;max-width:none;min-height:100dvh;box-shadow:none;padding-bottom:calc(78px + env(safe-area-inset-bottom))}
+ main{padding:10px 16px 28px;min-height:calc(100dvh - 75px)}
+ .bottom-nav{left:0;transform:none;width:100%;bottom:0;min-height:58px;padding:5px 4px calc(5px + env(safe-area-inset-bottom));justify-content:space-between}
+ .bottom-nav button{flex:1;min-width:0;min-height:48px;padding:4px 2px;gap:2px;font-size:11px;touch-action:manipulation}
+ .bottom-nav .nav-icon{font-size:23px;line-height:25px}
+ .task{grid-template-columns:44px 36px minmax(0,1fr) auto 44px;gap:5px;min-height:64px;padding:8px 0}
+ .task .check{position:relative;width:44px;height:44px;border:0;background:transparent;font-size:14px;display:grid;place-items:center;touch-action:manipulation}
+ .task .check:before{content:"";position:absolute;width:22px;height:22px;border:1.5px solid #98877c;border-radius:50%;background:transparent}
+ .task .check.done:before{border-color:var(--green);background:var(--green)}
+ .task .check.done{color:white;z-index:1}
+ .task .task-art{width:36px;height:40px}
+ .task .task-name{font-size:13px;line-height:1.4;overflow-wrap:anywhere}
+ .task .task-reward{font-size:11px}
+ .task-reminder{width:44px;height:44px}
+ .task-reminder svg{width:25px;height:27px}
+ .day{min-height:44px;padding:3px 0}
+ .day b{margin-top:5px}
+ .calendar-day{height:46px}
+ .reminder-input,.modal input,.modal select{font-size:16px;min-height:48px}
+ .btn,.animal-action{min-height:44px;touch-action:manipulation}
+ .animal-collection{grid-template-columns:minmax(0,1fr);gap:10px}
+ .animal-card{display:grid;grid-template-columns:78px minmax(0,1fr);grid-template-rows:auto auto;column-gap:10px;align-items:center;padding:10px 12px;min-height:122px}
+ .animal-card>.animal-doodle,.animal-card>.mystery-gift{grid-column:1;grid-row:1 / span 2;width:78px;height:104px;align-self:center}
+ .animal-card>img.animal-doodle{object-fit:contain}
+ .animal-card-copy{grid-column:2;grid-row:1;gap:4px;align-self:end;padding:2px 8px 4px 0}
+ .animal-card-kind{font-size:15px;line-height:1.15}
+ .animal-card-copy strong{font-size:14px;line-height:1.25}
+ .animal-card-copy small{min-height:0;font-size:12px;line-height:1.4}
+ .animal-fact{gap:5px;margin-top:3px;padding:8px 9px}
+ .animal-fact>span{font-size:16px}
+ .animal-fact p{font-size:12px;line-height:1.45}
+ .animal-fact a{font-size:10px;line-height:1.35}
+ .animal-card>.animal-action{grid-column:2;grid-row:2;align-self:start;margin-top:4px;width:min(100%,230px);min-height:44px;font-size:11px}
+ .mystery-gift{filter:drop-shadow(0 3px 3px #55442a18)}
+ .mystery-gift svg{width:78px;height:82px}
+ .mystery-gift i{width:23px;height:23px}
+ .animal-card:before{top:8px;right:10px}
+ .card{padding:14px}
+ .reminder-label{font-size:12px}
+}
+@media(max-width:600px){
+ .welcome-screen{min-height:calc(100dvh - env(safe-area-inset-top));justify-content:flex-start;padding:clamp(30px,6svh,48px) 24px calc(178px + env(safe-area-inset-bottom))}
+ .welcome-screen:before{inset:8px 3px 10px;border-radius:28px;background:linear-gradient(155deg,#fffaf3d9,#f4e4db6b)}
+ .welcome-copy{width:100%;text-align:center}
+ .welcome-screen h1{max-width:100%;font-size:clamp(36px,10vw,42px);line-height:1.04;white-space:normal;text-align:center;transform:none;margin:4px auto 18px}
+ .welcome-screen h1 .heart{font-size:21px}
+ .welcome-copy p{max-width:290px;margin:0 auto;font-size:20px;line-height:1.24;text-align:center;transform:none}
+ .welcome-flowers{left:0;right:0;top:auto;bottom:22%;width:auto;height:155px}
+ .welcome-flowers .welcome-stem{left:7px;bottom:-10px;width:100px;height:158px;transform:rotate(-7deg)}
+ .welcome-flowers .welcome-flower{left:auto;right:30px;top:3px;width:64px;height:76px;transform:rotate(7deg)}
+ .welcome-cat{right:20px;bottom:13%;width:77px;height:69px;transform:rotate(5deg)}
+ .welcome-heart.heart-a{right:52px;top:34%;font-size:28px}
+ .welcome-heart.heart-b{right:17px;bottom:22%;font-size:18px}
+ .welcome-sparkle{right:25px;bottom:24%;font-size:27px}
+ .welcome-start{width:min(260px,88%)!important;margin:24px auto 0;padding:13px 20px!important;align-self:center;transform:rotate(-1deg);font-size:21px!important}
+ .month-controls button{width:44px;height:44px;flex:none}
+}
+@media(max-width:365px){
+ main{padding-left:12px;padding-right:12px}
+ .animal-card{grid-template-columns:66px minmax(0,1fr);column-gap:8px;padding:9px}
+ .animal-card>.animal-doodle,.animal-card>.mystery-gift{width:66px;height:92px}
+ .animal-card-copy strong{font-size:13px}
+ .animal-fact p{font-size:11px}
+ .animal-fact a{font-size:9px}
+ .task{grid-template-columns:40px 32px minmax(0,1fr) auto 40px;gap:4px}
+ .task .check,.task-reminder{width:40px;height:44px}
+ .task .task-art{width:32px;height:36px}
+}

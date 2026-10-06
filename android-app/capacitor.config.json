@@ -1,0 +1,10 @@
+{
+  "appId": "ru.molotov9393.dopamineplanner",
+  "appName": "Дофаминовый планер",
+  "webDir": "www",
+  "plugins": {
+    "LocalNotifications": {
+      "iconColor": "#d8819a"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "dopamine-planner-android",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Android build for the Dopamine Planner web app",
+  "scripts": {
+    "prepare:web": "node scripts/prepare-web.mjs",
+    "bundle:notifications": "esbuild src/native-notifications.mjs --bundle --format=iife --platform=browser --outfile=www/android-notifications.js",
+    "sync:android": "npm run prepare:web && npm run bundle:notifications && cap sync android && node scripts/ensure-android-permission.mjs",
+    "add:android": "cap add android",
+    "open:android": "npm run sync:android && cap open android",
+    "build:debug": "npm run sync:android && node scripts/build-debug.mjs"
+  },
+  "dependencies": {
+    "@capacitor/android": "8.5.2",
+    "@capacitor/core": "8.5.2",
+    "@capacitor/local-notifications": "8.3.1"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "8.5.2",
+    "esbuild": "0.28.2"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

@@ -38,6 +38,15 @@ body.modal-open{overflow:hidden;overscroll-behavior:none}
 @media(min-width:760px){#modal-root .art-picker{grid-template-columns:repeat(5,minmax(0,1fr))}}
 @media(max-width:359px){#modal-root .art-picker{grid-template-columns:repeat(3,minmax(0,1fr))}}
 
+/* Hand-colored illustrations for the main navigation */
+.bottom-nav button{min-width:0;gap:1px;padding:3px 1px 2px;border-radius:13px;transition:color .18s ease,background-color .18s ease,transform .18s ease}
+.bottom-nav button:focus-visible{outline:2px solid #c96f88;outline-offset:-2px}
+.bottom-nav .nav-icon{display:block;width:28px;height:28px;object-fit:contain;line-height:normal;transition:transform .18s ease}
+.bottom-nav button.active{background:#f3dfe3}
+.bottom-nav button.active .nav-icon{transform:translateY(-1px)}
+@media(max-width:355px){.bottom-nav button{font-size:8px}.bottom-nav .nav-icon{width:25px;height:25px}}
+@media(prefers-reduced-motion:reduce){.bottom-nav button,.bottom-nav .nav-icon{transition:none}}
+
 /* A small hand-painted garden that grows with the planner's dopamine points. */
 .garden-balance{display:flex;align-items:center;justify-content:space-between;padding:2px 3px 12px;color:#77645a;font-size:12px}
 .garden-balance>span{display:flex;align-items:center;gap:7px}
@@ -171,3 +180,241 @@ body.modal-open{overflow:hidden;overscroll-behavior:none}
 .task-swipe-content:focus-visible{outline:2px solid var(--pink);outline-offset:-2px}
 @media(max-width:365px){.task-swipe-content.task{grid-template-columns:40px 32px minmax(0,1fr) auto 40px;gap:4px}.task-swipe-content .check,.task-swipe-content .task-reminder{width:40px;height:44px}.task-swipe-content .task-art{width:32px;height:36px}}
 @media(prefers-reduced-motion:reduce){.task-swipe-content{transition:none}}
+
+
+/* Notebook-paper note editor in the planner's hand-drawn style. */
+.task-swipe-content{cursor:pointer}
+.task-swipe-content button{cursor:pointer}
+.task-note-indicator{color:#b67587;font:11px Comfortaa,sans-serif;white-space:nowrap}
+.task-notes-modal{position:relative;padding-top:26px;background-color:#fff8ef;background-image:repeating-linear-gradient(to bottom,transparent 0,transparent 31px,#dfd4e0 32px,#dfd4e0 33px);background-position:0 0;box-shadow:0 -12px 40px #30272235}
+.task-notes-modal h2{font:30px/1.15 'Marck Script',cursive;color:#53433f;text-align:center;margin:4px 0 2px}
+.task-notes-modal .reminder-task-title{font-size:25px;margin-bottom:15px}
+.task-notes-modal .reminder-label{font:20px 'Marck Script',cursive;color:#80665e}
+.task-note-input{display:block;width:100%;min-height:166px;resize:vertical;margin:6px 0 8px;padding:8px 12px 8px 22px;border:1px solid #dfcfc1;border-radius:13px;background-color:#fffdf8;background-image:linear-gradient(90deg,transparent 17px,#e8b8bd 17px,#e8b8bd 18px,transparent 18px),repeating-linear-gradient(to bottom,transparent 0,transparent 31px,#c9d9e7 32px,#c9d9e7 33px);background-position:0 0,0 7px;color:#594840;font:22px/32px 'Marck Script',cursive;box-shadow:0 3px 10px #785b4210}
+.task-note-input:focus{outline:2px solid #d8819a66;border-color:#d8819a}
+.task-note-input::placeholder{color:#ae9d92;opacity:.9}
+.task-note-footer{display:flex;justify-content:space-between;gap:8px;margin:0 2px 13px;color:var(--muted);font:15px 'Marck Script',cursive}
+.task-notes-modal .btn{width:100%;font:20px 'Marck Script',cursive;letter-spacing:.02em}
+
+/* Comfortable bulk task entry and its live count preview. */
+.bulk-task-modal{padding-top:20px}
+.bulk-task-modal h2{text-align:center;margin-bottom:8px}
+.bulk-task-modal>label{display:block;margin-bottom:7px}
+.bulk-task-input{display:block;width:100%;min-height:110px;resize:vertical;padding:13px 15px;border:1px solid var(--line);border-radius:14px;background:#fffaf3;color:var(--ink);font:14px/1.7 Comfortaa,'Trebuchet MS',sans-serif;box-shadow:inset 0 2px 8px #785b4210}
+.bulk-task-input:focus{outline:2px solid #d8819a66;border-color:#d8819a}
+.bulk-task-preview{display:flex;flex-direction:column;gap:5px;min-height:42px;margin:9px 0 5px;padding:9px 12px;border:1px dashed #dfc2c2;border-radius:12px;background:#f9e9e966;color:var(--muted);font-size:11px}
+#bulk-task-count{color:#99586a;font-weight:700}
+#bulk-task-names{overflow-wrap:anywhere}
+.bulk-task-hint{margin:5px 2px 9px;color:var(--muted);font-size:10px;line-height:1.6}
+
+/* Multi-select illustrated task library. */
+.task-picker-modal{padding-top:19px}
+.task-picker-modal h2{text-align:center;margin:2px 0 8px}
+.task-picker-search-label,.task-reward-label{display:block;margin:0 0 7px;color:var(--muted);font-size:11px;line-height:1.5}
+.task-picker-search{width:100%;height:44px;padding:0 14px;border:1px solid var(--line);border-radius:13px;background:#fffaf3;color:var(--ink);font:13px Comfortaa,'Trebuchet MS',sans-serif}
+.task-picker-search:focus{outline:2px solid #d8819a66;border-color:#d8819a}
+.task-choice-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;max-height:37dvh;overflow:auto;overscroll-behavior:contain;margin:11px 0;padding:2px 2px 5px}
+.task-choice{position:relative;display:flex;min-width:0;min-height:91px;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:7px 4px;border:1px solid var(--line);border-radius:14px;background:#fff9f25c;color:var(--ink);transition:background .18s,border-color .18s,transform .18s}
+.task-choice:active{transform:scale(.96)}
+.task-choice.selected{border-color:#d9869e;background:#f7e3e8;box-shadow:0 3px 9px #bd718820}
+.task-choice-art{width:44px;height:44px;object-fit:contain}
+.task-choice-name{width:100%;color:var(--muted);font:9px/1.24 Comfortaa,'Trebuchet MS',sans-serif;text-align:center;overflow-wrap:anywhere}
+.task-choice.selected .task-choice-name{color:#8f4f63;font-weight:700}
+.task-choice-tick{position:absolute;top:4px;right:5px;width:17px;height:17px;display:grid;place-items:center;border:1px solid #d9c7bc;border-radius:50%;background:#fffaf3;color:transparent;font:12px/1 Comfortaa,sans-serif}
+.task-choice.selected .task-choice-tick{border-color:#c87e91;background:#d9869e;color:white}
+.task-custom{margin:2px 0 9px;padding:9px 12px;border:1px solid var(--line);border-radius:13px;background:#fff9f260;color:var(--muted);font-size:11px}
+.task-custom summary{color:#8f4f63;font-weight:600;cursor:pointer}
+.task-custom label{display:block;margin:10px 0 4px}
+.task-custom input,.task-custom select{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:#fffaf3;color:var(--ink);font:12px Comfortaa,sans-serif}
+.task-custom .btn{margin-top:9px}
+.task-selection-summary{margin:9px 0 12px;padding:10px 12px;border:1px dashed #dfc2c2;border-radius:13px;background:#f9e9e966;color:var(--muted);font-size:11px}
+.task-selection-summary strong{display:block;margin-bottom:5px;color:#99586a;font-size:12px}
+.task-selection-chips{max-height:62px;overflow:auto;line-height:1.7;overflow-wrap:anywhere}
+.task-picker-modal #save-task{position:sticky;bottom:0;z-index:2;width:100%;box-shadow:0 -5px 12px #f7eee6}
+@media(max-width:360px){.task-choice-grid{grid-template-columns:repeat(3,minmax(0,1fr));max-height:35dvh}.task-choice{min-height:86px}}
+
+/* Calendar tab with hand-drawn heart markers and per-day plan controls. */
+.bottom-nav{gap:0}
+.bottom-nav button{flex:1;min-width:0;padding:3px 1px;font-size:8px;white-space:nowrap}
+.bottom-nav .nav-icon{font-size:20px}
+.calendar-day{display:grid;place-items:center;border:0;border-radius:0;background:transparent;font:12px Comfortaa,sans-serif;overflow:visible}
+.calendar-day .calendar-heart{position:absolute;left:50%;top:50%;width:32px;height:31px;transform:translate(-50%,-52%);overflow:visible;pointer-events:none}
+.calendar-day .calendar-heart path{fill:#fffaf5;stroke:#ddcbc4;stroke-width:1.15;stroke-linejoin:round;transition:fill .18s,stroke .18s,transform .18s}
+.calendar-day>span{position:relative;z-index:1;line-height:1;color:var(--ink)}
+.calendar-day.today:not(.heart-work):not(.heart-off) .calendar-heart path{stroke:#d8819a;stroke-width:1.8}
+.calendar-day.today>span{color:#a34f69;font-weight:700}
+.calendar-day.heart-work .calendar-heart path{fill:#d9e8d1;stroke:#78936b;stroke-width:1.2}
+.calendar-day.heart-work>span{color:#4f7047}
+.calendar-day.heart-off .calendar-heart path{fill:#f1c5d0;stroke:#c8758b;stroke-width:1.2}
+.calendar-day.heart-off>span{color:#94485e}
+.calendar-day.selected .calendar-heart path{filter:drop-shadow(0 1px 2px #72564a38);transform:scale(1.1);transform-origin:center}
+.calendar-day.selected:after{content:none}
+.calendar-day-types{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.day-type-choice{display:flex;align-items:center;justify-content:center;gap:7px;min-height:48px;padding:8px;border:1px solid var(--line);border-radius:14px;background:#fff9f25c;color:var(--muted);font:11px Comfortaa,sans-serif;cursor:pointer;transition:background .18s,border-color .18s,transform .18s}
+.day-type-choice:active{transform:scale(.97)}
+.day-type-choice .day-type-heart{font:26px/1 Comfortaa,sans-serif;color:#cfc0b7}
+.day-type-choice.work.active{border-color:#9eb392;background:#e8f0e3;color:#4f7047}
+.day-type-choice.work.active .day-type-heart{color:#6e9662}
+.day-type-choice.off.active{border-color:#d59aa8;background:#f8e5e9;color:#94485e}
+.day-type-choice.off.active .day-type-heart{color:#c8758b}
+.calendar-mark-hint{margin:0;color:var(--muted);font:15px 'Marck Script',cursive;text-align:center}
+.calendar-legend{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:11px;color:var(--muted);font-size:9px}
+.calendar-legend>span{display:flex;align-items:center;gap:4px}
+.legend-heart{font:15px Comfortaa,sans-serif;font-style:normal}
+.legend-work{color:#78936b}.legend-off{color:#c8758b}
+.calendar-plan-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:5px}
+.calendar-plan-heading h3{margin:0}
+.calendar-plan-heading>span{min-width:25px;height:25px;display:grid;place-items:center;border-radius:50%;background:#f2dce1;color:#955568;font-size:11px}
+.calendar-day-plan>.btn{margin-top:11px}
+@media(max-width:355px){.bottom-nav button{font-size:7px}.bottom-nav .nav-icon{font-size:19px}.calendar-day-types{gap:6px}.day-type-choice{font-size:10px}}
+
+/* Keep the month as a familiar numbered calendar; heart colors live in the selected-day controls. */
+.calendar-day{height:46px;border:0;border-radius:0;background:transparent;overflow:visible}
+.calendar-day .calendar-date-number{position:relative;z-index:1;width:34px;height:34px;display:grid;place-items:center;border:1px solid transparent;border-radius:50%;color:var(--ink);font:12px Comfortaa,sans-serif;transition:background .18s,border-color .18s,transform .18s}
+.calendar-day.today .calendar-date-number{border-color:var(--pink);border-width:1.6px;color:#a34f69;font-weight:700}
+.calendar-day.selected .calendar-date-number{background:#f6e1e6;border-color:#d78ca0;color:#88465b;font-weight:700;transform:scale(1.04)}
+.calendar-day.today.selected .calendar-date-number{border-width:2px}
+.calendar-day .calendar-day-mark{position:absolute;bottom:0;left:0;right:0;height:10px;font:16px/8px Comfortaa,sans-serif;font-style:normal;color:transparent}
+.calendar-day.day-work .calendar-day-mark{color:#78936b}.calendar-day.day-off .calendar-day-mark{color:#c8758b}
+.calendar-day.selected:after{content:none}
+.calendar-day-types{gap:12px;margin-top:5px}
+.day-type-choice{min-height:58px;justify-content:flex-start;padding:9px 11px;border:1px solid #d9cabc;border-bottom-width:2px;border-radius:15px 12px 16px 11px;background:linear-gradient(145deg,#fffaf3,#f6eee4);color:#67584f;font:19px 'Marck Script',cursive;box-shadow:0 3px 8px #7054410d}
+.day-type-choice.work{transform:rotate(-.6deg)}.day-type-choice.off{transform:rotate(.6deg)}
+.day-type-choice:active{transform:scale(.98)}
+.day-type-choice .day-type-heart{flex:none;width:27px;height:27px;fill:#fffaf5;stroke:#a99a8f;stroke-width:1.45;stroke-linecap:round;stroke-linejoin:round;overflow:visible}
+.day-type-choice.work.active{border-color:#a6b899;border-bottom-color:#809570;background:linear-gradient(145deg,#f2f6ed,#e4eddc);color:#4f7047}
+.day-type-choice.work.active .day-type-heart{fill:#9abd8a;stroke:#66875c}
+.day-type-choice.off.active{border-color:#d9a2ad;border-bottom-color:#bd7688;background:linear-gradient(145deg,#fcf0f1,#f5dfe4);color:#94485e}
+.day-type-choice.off.active .day-type-heart{fill:#e9a2b3;stroke:#b8637b}
+.calendar-mark-hint{margin-top:2px;color:#8a786e;font-size:16px}
+.calendar-legend .legend-heart{font-size:10px}
+
+/* A marked date uses a hand-drawn filled heart as its number badge. */
+.calendar-day.selected{border:0;background:transparent;color:var(--ink)}
+.calendar-day.selected .calendar-date-number{background:#f9e9ed;border-color:#d8819a;color:#914c62}
+.calendar-day.today.selected .calendar-date-number{background:#f9e9ed}
+.calendar-day .calendar-day-mark{position:absolute;left:50%;right:auto;top:50%;bottom:auto;display:block;width:42px;height:46px;transform:translate(-50%,-50%);z-index:0;overflow:hidden;pointer-events:none;background-image:url('./assets/doodles/calendar-hearts-pencil-v2.png');background-size:84px 84px;background-repeat:no-repeat}
+.calendar-day .calendar-day-mark.work{background-position:left center}
+.calendar-day .calendar-day-mark.off{background-position:right center}
+.calendar-day.day-work .calendar-date-number,.calendar-day.day-off .calendar-date-number{z-index:1;width:34px;height:34px;border:0!important;border-radius:0;background:transparent!important;color:#3f3833!important;font-weight:700;transform:none}
+.calendar-day.day-work.selected .calendar-date-number,.calendar-day.day-off.selected .calendar-date-number{background:transparent!important}
+.day-type-choice .day-type-heart path{fill:#fffaf5;stroke:#a99a8f;stroke-width:1.45;stroke-linecap:round;stroke-linejoin:round}
+.day-type-choice.work.active .day-type-heart path{fill:#9abd8a;stroke:#66875c}
+.day-type-choice.off.active .day-type-heart path{fill:#e9a2b3;stroke:#b8637b}
+
+/* The Tamagotchi daisy grows from a little animated sprout into the chosen pencil-flower. */
+.daisy-intro{text-align:center;margin:0 auto 12px;max-width:340px;font:16px 'Marck Script',cursive;color:#846e62}
+.daisy-tamagotchi{overflow:hidden;border:1px solid #ddc9b8;border-radius:25px 20px 28px 22px;background:linear-gradient(155deg,#fffaf4,#f6ede3);box-shadow:0 8px 24px #85664b10}
+.daisy-scene{position:relative;isolation:isolate;height:clamp(255px,68vw,355px);overflow:hidden;background:linear-gradient(180deg,#f9f2e9 0%,#f6e8df 66%,#ead9c7 100%)}
+.daisy-growing-art{position:absolute;z-index:1;left:50%;bottom:13px;width:min(72%,250px);height:84%;transform:translateX(-50%);transform-origin:50% 100%;animation:daisy-sway 4.8s ease-in-out infinite}
+.daisy-growing-art.opening{width:min(76%,270px);height:90%}
+.daisy-plant-svg{width:100%;height:100%;overflow:visible;filter:drop-shadow(0 5px 3px #5c74401a)}
+.daisy-stem{stroke-dasharray:180;stroke-dashoffset:0;transform-origin:120px 225px;animation:daisy-stem-breathe 3.6s ease-in-out infinite}
+.daisy-leaf-pair{transform-box:fill-box;transform-origin:50% 100%;animation:daisy-leaf-sway 3.7s ease-in-out infinite;animation-delay:var(--leaf-delay,0s)}
+.daisy-leaf{fill:#8eae75;stroke:#5c8054;stroke-width:2;stroke-linejoin:round}.daisy-leaf.right{fill:#a9bf82}.daisy-leaf-pair:nth-of-type(even) .daisy-leaf{fill:#a9bf82}
+.daisy-bud{transform-box:fill-box;transform-origin:50% 90%;animation:daisy-bud-bob 2.7s ease-in-out infinite}
+.daisy-opening-flower{transform-box:fill-box;transform-origin:50% 90%;animation:daisy-open 1.1s cubic-bezier(.2,.8,.25,1) both,daisy-flower-bob 3.6s ease-in-out 1.1s infinite}
+.daisy-petal{fill:#f5d8d4;stroke:#aa8073;stroke-width:1.6;transform-box:fill-box;transform-origin:50% 100%;animation:daisy-petal-open .9s cubic-bezier(.2,.8,.25,1) both}
+.daisy-petal:nth-child(2n){fill:#fff1e2}.daisy-petal:nth-child(3n){animation-delay:.06s}
+.daisy-bloom-art{position:absolute;z-index:1;left:50%;bottom:18px;width:min(76%,270px);aspect-ratio:1;transform:translateX(-50%);border-radius:50%;background-image:url('./assets/doodles/daisy-tamagotchi-blooms-v1.png');background-repeat:no-repeat;background-size:300% 100%;filter:drop-shadow(0 8px 5px #5e4b3617);animation:daisy-bloom-arrive .85s cubic-bezier(.2,.8,.25,1) both,daisy-flower-bob 4s ease-in-out .85s infinite}
+.daisy-bloom-art.bloom-6{background-position:50% center}.daisy-bloom-art.bloom-7{background-position:100% center}
+.daisy-care{padding:15px 17px 16px}.daisy-stage-copy{text-align:center}.daisy-stage-copy>span{display:block;color:#9b8174;font-size:10px;letter-spacing:.05em}.daisy-stage-copy h3{margin:4px 0 2px;font:22px 'Marck Script',cursive;color:#65483f}.daisy-stage-copy p{margin:0;color:#89776b;font-size:11px}
+.daisy-progress{height:10px;margin:15px 2px 6px;border:1px solid #ddcbbc;border-radius:99px;background:#eee2d6;overflow:hidden}.daisy-progress>span{display:block;height:100%;border-radius:inherit;background:repeating-linear-gradient(135deg,#c1d0a8 0 5px,#d5dfc2 5px 8px);transition:width .55s cubic-bezier(.2,.8,.25,1)}
+.daisy-progress-label{text-align:center;color:#958174;font-size:10px}.daisy-feed-row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:14px;padding-top:12px;border-top:1px solid #e4d4c5}.daisy-feed-row>span{color:#8c786b;font-size:11px;white-space:nowrap}.daisy-feed-row strong{color:#a4566c;font-size:15px}.daisy-feed{min-height:44px;padding:0 16px;font-size:12px;box-shadow:0 3px 0 #c77d91;transition:transform .16s,box-shadow .16s}.daisy-feed:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #c77d91}.daisy-feed:disabled{opacity:.55;filter:saturate(.6)}.daisy-feed-note{margin:9px 0 0;text-align:center;color:#a28e81;font-size:9px}
+@keyframes daisy-sway{0%,100%{rotate:-2deg}50%{rotate:2.2deg}}@keyframes daisy-stem-breathe{0%,100%{translate:0 0}50%{translate:1px -2px}}@keyframes daisy-leaf-sway{0%,100%{rotate:-2deg}50%{rotate:4deg}}@keyframes daisy-bud-bob{0%,100%{rotate:-3deg;scale:1}50%{rotate:4deg;scale:1.04}}@keyframes daisy-open{0%{opacity:.65;scale:.35;rotate:-17deg}70%{scale:1.08;rotate:4deg}100%{opacity:1;scale:1;rotate:0}}@keyframes daisy-petal-open{from{scale:.2;opacity:.3}to{scale:1;opacity:1}}@keyframes daisy-flower-bob{0%,100%{translate:0 0;rotate:-1deg}50%{translate:0 -5px;rotate:1.5deg}}@keyframes daisy-bloom-arrive{0%{opacity:0;scale:.6}68%{opacity:1;scale:1.06}100%{scale:1}}@keyframes daisy-sparkle{0%,100%{opacity:.4;transform:scale(.8) rotate(-8deg)}50%{opacity:1;transform:scale(1.1) rotate(8deg)}}
+@media(max-width:420px){.daisy-care{padding:13px 13px 15px}.daisy-feed-row{gap:7px}.daisy-feed{padding:0 12px;font-size:11px}.daisy-scene{height:clamp(245px,74vw,330px)}}
+@media(max-width:345px){.daisy-feed-row{align-items:stretch;flex-direction:column}.daisy-feed{width:100%}}
+@media(prefers-reduced-motion:reduce){.daisy-growing-art,.daisy-stem,.daisy-leaf-pair,.daisy-bud,.daisy-opening-flower,.daisy-petal,.daisy-bloom-art,.daisy-scene-sparkle{animation:none!important}}
+body.reduce-motion .daisy-growing-art,body.reduce-motion .daisy-stem,body.reduce-motion .daisy-leaf-pair,body.reduce-motion .daisy-bud,body.reduce-motion .daisy-opening-flower,body.reduce-motion .daisy-petal,body.reduce-motion .daisy-bloom-art,body.reduce-motion .daisy-scene-sparkle{animation:none!important}
+
+/* Quieter greenhouse: a clean sheet of warm paper, with motion concentrated on the plant. */
+.daisy-scene{isolation:isolate;background:#f5ece2}
+.daisy-backlight{position:absolute;z-index:0;left:50%;top:7%;width:min(82%,300px);aspect-ratio:1;transform:translateX(-50%);border-radius:50%;background:radial-gradient(ellipse,#f9dfdf 0%,#f8e9df 49%,#f5ece2 73%);opacity:.82}
+.daisy-ground-shadow{position:absolute;z-index:0;left:50%;bottom:24px;width:min(48%,165px);height:25px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(ellipse,#8d77502a 0%,#9e876316 45%,transparent 75%)}
+.daisy-growing-art{z-index:1;animation:none}
+.daisy-growing-art.stage-0{width:min(32%,116px);height:75%}.daisy-growing-art.stage-1{width:min(46%,165px);height:79%}.daisy-growing-art.stage-2,.daisy-growing-art.stage-3{width:min(61%,210px);height:82%}.daisy-growing-art.stage-4{width:min(70%,240px);height:86%}
+.daisy-plant-svg{transform-box:fill-box;transform-origin:50% 94%;animation:daisy-sprout-sway 3.2s ease-in-out infinite}
+.daisy-stem{fill:none;stroke:#6f8c5d;stroke-width:5;stroke-linecap:round;stroke-dasharray:none;animation:none}
+.daisy-stem-highlight{fill:none;stroke:#a8bc83;stroke-width:1.5;stroke-linecap:round;opacity:.9}
+.daisy-leaf{fill:#a0b982;stroke:#5e7c50;stroke-width:2;stroke-linejoin:round}.daisy-leaf-vein{fill:none;stroke:#e0e8bd;stroke-width:1.4;stroke-linecap:round;opacity:.9}
+.daisy-bloom-art{display:block;position:absolute;z-index:1;left:50%;bottom:8px;width:min(78%,260px);height:auto;aspect-ratio:auto;transform:translateX(-50%);border-radius:0;background:none;object-fit:contain;filter:drop-shadow(0 8px 5px #5e4b3617);animation:daisy-bloom-arrive .7s cubic-bezier(.2,.7,.25,1) both,daisy-bloom-sway 3.8s ease-in-out .7s infinite}
+@keyframes daisy-sprout-sway{0%,100%{transform:translate3d(-2px,1px,0) rotate(-3deg)}50%{transform:translate3d(2px,-4px,0) rotate(3deg)}}
+@keyframes daisy-bloom-sway{0%,100%{translate:0 1px;rotate:-1.2deg}50%{translate:0 -4px;rotate:1.2deg}}
+@media(prefers-reduced-motion:reduce){.daisy-plant-svg{animation:none!important}}
+body.reduce-motion .daisy-plant-svg{animation:none!important}
+
+/* Hand-drawn first growth stages and a playful watering animation. */
+.daisy-growth-sprite{position:absolute;left:50%;bottom:8px;width:min(68%,230px);aspect-ratio:1;transform:translateX(-50%);background-image:url('./assets/doodles/daisy-growth-sprouts-v1.png');background-repeat:no-repeat;background-size:200% 200%;filter:drop-shadow(0 6px 3px #5e4b3617);animation:daisy-sprout-sway 3.2s ease-in-out infinite}
+.daisy-growth-sprite.sprite-stage-0{background-position:0 0;width:min(48%,165px)}.daisy-growth-sprite.sprite-stage-1{background-position:100% 0;width:min(54%,185px)}.daisy-growth-sprite.sprite-stage-2{background-position:0 100%;width:min(65%,220px)}.daisy-growth-sprite.sprite-stage-3{background-position:100% 100%;width:min(69%,235px)}
+.daisy-watering-art{position:absolute;z-index:4;right:8%;top:8%;width:clamp(92px,30vw,132px);aspect-ratio:1.07;opacity:0;visibility:hidden;pointer-events:none;transform:translate(18px,-8px) rotate(8deg);transform-origin:75% 75%;filter:drop-shadow(0 4px 3px #614d3d20)}.daisy-watering-art svg{width:100%;height:100%;overflow:visible}.watering-can{transform-box:fill-box;transform-origin:72% 78%}.watering-drops{opacity:0}.watering-drops path{fill:#82b9c5;stroke:#557f8a;stroke-width:1.4;transform-box:fill-box;transform-origin:center}.watering-sparkle{fill:#e3bd65;opacity:0}
+.daisy-scene.is-watering .daisy-watering-art{visibility:visible;animation:watering-can-enter .34s cubic-bezier(.2,.75,.25,1) both,watering-can-leave .3s ease-in 1.22s both}.daisy-scene.is-watering .watering-can{animation:watering-tip .48s ease-in-out .28s 2 alternate}.daisy-scene.is-watering .watering-drops{opacity:1}.daisy-scene.is-watering .watering-drops path{animation:watering-drop .56s ease-in .35s 2 both}.daisy-scene.is-watering .watering-drops path:nth-child(2){animation-delay:.53s}.daisy-scene.is-watering .watering-drops path:nth-child(3){animation-delay:.71s}.daisy-scene.is-watering .watering-sparkle{animation:watering-twinkle .65s ease-in .75s both}.daisy-scene.is-watering .daisy-growing-art,.daisy-scene.is-watering .daisy-bloom-art{animation:daisy-watered-sway .7s ease-in-out .65s 2}
+@keyframes watering-can-enter{from{opacity:0;transform:translate(24px,-12px) rotate(10deg)}to{opacity:1;transform:translate(0,0) rotate(0)}}@keyframes watering-can-leave{to{opacity:0;transform:translate(14px,-10px) rotate(7deg)}}@keyframes watering-tip{to{transform:rotate(-12deg) translate(-2px,3px)}}@keyframes watering-drop{0%{opacity:0;transform:translate(0,0) scale(.65)}20%{opacity:1}100%{opacity:0;transform:translate(-16px,76px) scale(.9)}}@keyframes watering-twinkle{0%,100%{opacity:0;transform:scale(.5)}45%{opacity:1;transform:scale(1.1)}}@keyframes daisy-watered-sway{0%,100%{translate:0 0;rotate:-1deg}40%{translate:-3px -2px;rotate:2deg}75%{translate:2px 1px;rotate:-1.5deg}}
+@media(prefers-reduced-motion:reduce){.daisy-growth-sprite,.daisy-scene.is-watering .daisy-watering-art,.daisy-scene.is-watering .watering-can,.daisy-scene.is-watering .watering-drops path,.daisy-scene.is-watering .watering-sparkle,.daisy-scene.is-watering .daisy-growing-art,.daisy-scene.is-watering .daisy-bloom-art{animation:none!important}.daisy-scene.is-watering .daisy-watering-art{opacity:1;visibility:visible}}body.reduce-motion .daisy-growth-sprite{animation:none!important}
+
+.daisy-growing-art.stage-0{width:min(54%,190px);height:auto;aspect-ratio:1}.daisy-growing-art.stage-1{width:min(62%,215px);height:auto;aspect-ratio:1}.daisy-growing-art.stage-2{width:min(72%,245px);height:auto;aspect-ratio:1}.daisy-growing-art.stage-3{width:min(76%,260px);height:auto;aspect-ratio:1}.daisy-growth-sprite{inset:0;width:100%;height:100%;transform:none}.daisy-growth-sprite.sprite-stage-0,.daisy-growth-sprite.sprite-stage-1,.daisy-growth-sprite.sprite-stage-2,.daisy-growth-sprite.sprite-stage-3{width:100%}
+
+/* Keep the plant rooted: fixed pencil soil, with rotation only around the stem base. */
+.daisy-soil-bed{position:absolute;z-index:2;left:50%;bottom:9px;width:min(48%,170px);height:auto;transform:translateX(-50%);pointer-events:none}.daisy-soil-bed svg{display:block;width:100%;height:auto;overflow:visible}
+.daisy-growth-sprite{transform-origin:50% 100%;animation:daisy-rooted-sway 3.7s ease-in-out infinite}.daisy-plant-svg{transform-origin:50% 100%;animation:daisy-rooted-sway 3.7s ease-in-out infinite}.daisy-scene.is-watering .daisy-growing-art{animation:none!important}.daisy-scene.is-watering .daisy-growth-sprite,.daisy-scene.is-watering .daisy-plant-svg,.daisy-scene.is-watering .daisy-bloom-art{transform-origin:50% 100%;animation:daisy-watered-rooted-sway .7s ease-in-out .65s 2 both}
+.daisy-bloom-art{transform-origin:50% 100%}
+@keyframes daisy-rooted-sway{0%,100%{transform:rotate(-1deg)}50%{transform:rotate(1.2deg)}}@keyframes daisy-watered-rooted-sway{0%,100%{transform:rotate(-.8deg)}36%{transform:rotate(1.8deg)}72%{transform:rotate(-1.2deg)}}@keyframes daisy-bloom-sway{0%,100%{translate:0 0;rotate:-.8deg}50%{translate:0 0;rotate:.8deg}}
+@media(prefers-reduced-motion:reduce){.daisy-growth-sprite,.daisy-plant-svg,.daisy-bloom-art{animation:none!important}}body.reduce-motion .daisy-growth-sprite,body.reduce-motion .daisy-plant-svg,body.reduce-motion .daisy-bloom-art{animation:none!important}
+
+.daisy-soil-art{position:absolute;z-index:2;left:50%;bottom:-16px;width:min(72%,220px);height:auto;clip-path:inset(28% 8% 18%);transform:translateX(-50%);pointer-events:none}
+.daisy-soil-bed{display:none}
+.daisy-preview-notice{margin:0 auto 6px;text-align:center;color:#987c6d;font:14px 'Marck Script',cursive}
+
+/* Illustrated watering can; a single visible pour animation plus falling pencil-blue drops. */
+.daisy-watering-art{right:3%;top:5%;width:clamp(118px,42vw,170px);height:auto;aspect-ratio:1;overflow:visible;filter:drop-shadow(0 5px 4px #6e554820)}.daisy-watering-can-image{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;transform-origin:12% 70%}.daisy-watering-art .watering-drops{position:absolute;z-index:1;left:-1%;top:48%;width:46%;height:112%;opacity:0;overflow:visible}.daisy-watering-art .watering-drops path{fill:#91c6d0;stroke:#638d96;stroke-width:2;stroke-linejoin:round;transform-box:fill-box;transform-origin:center}
+.daisy-scene.is-watering .daisy-watering-art{visibility:visible;animation:watering-can-pour 1.95s ease-out both}.daisy-scene.is-watering .daisy-watering-can-image{animation:watering-tip .5s ease-in-out .28s 2 alternate}.daisy-scene.is-watering .daisy-watering-art .watering-drops{opacity:1}.daisy-scene.is-watering .daisy-watering-art .watering-drops path{animation:watering-drop .58s ease-in .2s 3 both}.daisy-scene.is-watering .daisy-watering-art .watering-drops path:nth-child(2){animation-delay:.46s}.daisy-scene.is-watering .daisy-watering-art .watering-drops path:nth-child(3){animation-delay:.72s}
+@keyframes watering-can-pour{0%{opacity:0;transform:translate(28px,-16px) scale(.9)}15%{opacity:1;transform:translate(0,0) scale(1)}75%{opacity:1;transform:translate(0,0) scale(1)}100%{opacity:0;transform:translate(12px,-8px) scale(.96)}}@keyframes watering-tip{to{transform:rotate(-8deg)}}@keyframes watering-drop{0%{opacity:0;transform:translate(0,0) scale(.55)}18%{opacity:1}100%{opacity:0;transform:translate(-14px,112px) scale(.9)}}
+@media(prefers-reduced-motion:reduce){.daisy-scene.is-watering .daisy-watering-art{animation:none!important;opacity:1;visibility:visible}.daisy-scene.is-watering .watering-drops path,.daisy-scene.is-watering .daisy-watering-can-image{animation:none!important}}body.reduce-motion .daisy-scene.is-watering .daisy-watering-art{animation:none!important;opacity:1;visibility:visible}body.reduce-motion .daisy-scene.is-watering .watering-drops path,body.reduce-motion .daisy-scene.is-watering .daisy-watering-can-image{animation:none!important}
+
+/* Keep every droplet attached to the perforated nozzle as the can tilts. */
+.watering-pour-group{position:absolute;inset:0;transform-origin:9% 51%}.daisy-watering-art .watering-drops{inset:0;width:100%;height:100%;overflow:visible}.daisy-watering-art .watering-drops path{stroke-width:.45}.daisy-scene.is-watering .daisy-watering-can-image{animation:none}.daisy-scene.is-watering .watering-pour-group{animation:watering-tip .5s ease-in-out .28s 2 alternate}.daisy-scene.is-watering .daisy-watering-art .watering-drops path{animation:watering-nozzle-drop .58s ease-in .4s 2 both}.daisy-scene.is-watering .daisy-watering-art .watering-drops path:nth-child(2){animation-delay:.56s}.daisy-scene.is-watering .daisy-watering-art .watering-drops path:nth-child(3){animation-delay:.72s}@keyframes watering-nozzle-drop{0%{opacity:0;transform:translate(0,0) scale(.65)}12%{opacity:1}100%{opacity:0;transform:translate(-8px,104px) scale(1)}}@media(prefers-reduced-motion:reduce){.daisy-scene.is-watering .watering-pour-group{animation:none!important}}body.reduce-motion .daisy-scene.is-watering .watering-pour-group{animation:none!important}
+
+.daisy-growing-art .daisy-growth-sprite,.daisy-growing-art .daisy-plant-svg{scale:var(--growth-scale,1);transition:scale .7s ease;transform-origin:50% 100%}
+
+/* Keep the pencil flower leaves above the soil, with its stem rooted in the mound. */
+.daisy-bloom-art{bottom:26px}.daisy-growing-art.stage-4{bottom:26px;width:min(70%,240px);height:auto;aspect-ratio:1}.daisy-opening-art{display:block;width:100%;height:100%;object-fit:contain;transform-origin:50% 100%;scale:var(--growth-scale,1);animation:daisy-rooted-sway 3.7s ease-in-out infinite;transition:scale .7s ease}.daisy-scene.is-watering .daisy-opening-art{animation:daisy-watered-rooted-sway .7s ease-in-out .65s 2 both}@media(prefers-reduced-motion:reduce){.daisy-opening-art{animation:none!important}}body.reduce-motion .daisy-opening-art{animation:none!important}
+
+/* Root coordinates measured from the opaque stem pixels of each pencil frame. */
+.daisy-growth-sprite.sprite-stage-0{translate:-4.3% 3.8%;transform-origin:54.3% 96.2%}.daisy-growth-sprite.sprite-stage-1{translate:-1.3% 3.8%;transform-origin:51.3% 96.2%}.daisy-growth-sprite.sprite-stage-2{translate:-8.9% 7.5%;transform-origin:58.9% 92.5%}.daisy-growth-sprite.sprite-stage-3{translate:-4.1% 7.5%;transform-origin:54.1% 92.5%}.daisy-opening-art{translate:3.1% 2.6%;transform-origin:46.9% 97.4%}
+.daisy-bloom-art{bottom:36px;transform:translateX(-47.4%);transform-origin:47.4% 98.5%}.daisy-bloom-art.bloom-6{transform:translateX(-47.7%);transform-origin:47.7% 98.6%}.daisy-bloom-art.bloom-7{transform-origin:47.4% 98.6%}.daisy-scene.is-watering .daisy-bloom-art{animation:daisy-bloom-watered-rooted .7s ease-in-out .65s 2 both;transform-origin:47.4% 98.5%}.daisy-scene.is-watering .daisy-bloom-art.bloom-6{transform-origin:47.7% 98.6%}@keyframes daisy-bloom-watered-rooted{0%,100%{rotate:-.8deg}36%{rotate:1.8deg}72%{rotate:-1.2deg}}
+
+/* One shared pencil stem/leaf frame across stages 3–8; only the flower head changes. */
+.daisy-shared-growth{position:absolute;z-index:1;left:50%;bottom:13px;width:min(76%,260px);aspect-ratio:1;transform:translateX(-50%)}.daisy-shared-plant{position:absolute;inset:0;transform-origin:50% 100%;animation:daisy-rooted-sway 3.7s ease-in-out infinite}.daisy-shared-stem{position:absolute;inset:0;background:url(./assets/doodles/daisy-growth-sprouts-v1.png) 100% 100%/200% 200% no-repeat;translate:-4.1% 7.5%;clip-path:inset(43% 0 0 0)}.daisy-shared-stem.with-closed-bud{clip-path:none}.daisy-flower-head{position:absolute;left:50%;bottom:49%;width:76%;height:auto;overflow:hidden;transform:translateX(-50%);transform-origin:50% 100%;scale:var(--head-scale,1);transition:scale .7s ease}.daisy-flower-head.opening-head{width:45%;aspect-ratio:600/510}.daisy-flower-head.mature-head{aspect-ratio:1254/1020}.daisy-scene.is-watering .daisy-shared-plant{animation:daisy-watered-rooted-sway .7s ease-in-out .65s 2 both}@media(prefers-reduced-motion:reduce){.daisy-shared-plant{animation:none!important}}body.reduce-motion .daisy-shared-plant{animation:none!important}
+
+/* Three drawn thirst states, anchored to the same soil and flower connection. */
+.daisy-wilt-base{position:absolute;inset:0;display:block;width:100%;height:100%;translate:0 7.5%;overflow:hidden;transform-origin:50% 92.5%}.daisy-wilt-early .daisy-wilt-base{animation:daisy-rooted-sway 5s ease-in-out infinite}.daisy-shared-stem.wilt-stem-connector{clip-path:inset(43% 45% 36% 45%)}.daisy-shared-stem.wilt-closed-head{clip-path:inset(0 0 57% 0);transform-origin:54.1% 43%}.wilt-1 .daisy-flower-head,.wilt-1 .wilt-closed-head{rotate:8deg;filter:saturate(.94)}.wilt-2 .daisy-flower-head,.wilt-2 .wilt-closed-head{rotate:18deg;filter:saturate(.84)}.wilt-3 .daisy-flower-head,.wilt-3 .wilt-closed-head{rotate:28deg;filter:saturate(.72)}.daisy-thirst-note{margin:11px 0 0;padding:9px 12px;border-radius:14px;background:#eadccf77;color:#967157;font:15px 'Marck Script',cursive;text-align:center}.daisy-scene.is-watering .daisy-wilt-early .daisy-wilt-base{animation:daisy-watered-rooted-sway .7s ease-in-out .65s 2 both}@media(prefers-reduced-motion:reduce){.daisy-wilt-base{animation:none!important}}body.reduce-motion .daisy-wilt-base{animation:none!important}
+
+/* Approved whole drawings: no independent leaf/head crops or moving soil. */
+.daisy-whole-art-frame{position:absolute;top:16px;left:50%;bottom:0;width:auto;height:calc(100% - 16px);max-width:calc(100% - 20px);aspect-ratio:var(--frame-aspect,.84);transform:translateX(-50%);overflow:hidden;z-index:1}.daisy-whole-art{display:block;width:100%;height:100%;object-fit:contain}.daisy-whole-art-frame.without-bee::after{content:"";position:absolute;right:0;top:0;width:24%;height:22%;background:#fdf7e7;border-radius:0 0 0 14px;pointer-events:none}.has-whole-daisy{background:#fff9e8}.has-whole-daisy .daisy-backlight,.has-whole-daisy .daisy-ground-shadow{display:none}
+
+/* The two-leaf stage uses its complete original frame, not the bud stem crop. */
+.daisy-shared-stem.with-two-leaves{background-position:0 100%;translate:-8.9% 7.5%;clip-path:none}
+.daisy-flower-head.opening-head{bottom:40%}.daisy-flower-head.mature-head{bottom:40%}
+
+/* Wilting keeps each growth illustration intact and bends the plant from its root. */
+.daisy-growing-art.daisy-wilt-early{transform-origin:50% 96%;}
+.daisy-growing-art.stage-0 .daisy-growth-sprite{scale:1.28}.daisy-growing-art.stage-1 .daisy-growth-sprite{scale:1.16}
+.daisy-wilt-early.wilt-1 .daisy-growth-sprite{animation:none;transform:rotate(10deg);filter:sepia(.68) saturate(.96) brightness(.94)}
+.daisy-wilt-early.wilt-2 .daisy-growth-sprite{animation:none;transform:rotate(18deg);filter:sepia(.86) saturate(.9) brightness(.84)}
+.daisy-wilt-early.wilt-3 .daisy-growth-sprite{animation:none;transform:rotate(26deg);filter:sepia(1) saturate(.84) brightness(.76)}
+.daisy-shared-growth.wilt-1 .daisy-shared-plant{animation:none;transform:rotate(10deg);filter:sepia(.62) saturate(.94) brightness(.92)}
+.daisy-shared-growth.wilt-2 .daisy-shared-plant{animation:none;transform:rotate(19deg);filter:sepia(.82) saturate(.86) brightness(.83)}
+.daisy-shared-growth.wilt-3 .daisy-shared-plant{animation:none;transform:rotate(27deg);filter:sepia(1) saturate(.78) brightness(.74)}
+
+.daisy-dev-tools{max-width:760px;margin:0 auto 16px;padding:12px 14px;border:1px solid #e2cdbb;border-radius:16px;background:#fff9f2;color:#896f60;font-size:12px}.daisy-dev-tools>div{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:4px 0 9px}.daisy-dev-buttons{display:flex;flex-wrap:wrap;gap:5px}.daisy-dev-buttons button{border:1px solid #ddc6b4;border-radius:11px;padding:6px 9px;background:#fffdf9;color:#896f60;font:inherit;cursor:pointer}.daisy-dev-buttons button.selected{background:#f4dce2;border-color:#d48ca2;color:#9b5369}.daisy-dev-tools small{display:block;text-align:center;color:#a18a78}
+
+/* Wilt must read clearly before a full bloom: progressively lower each young plant. */
+.daisy-wilt-early.stage-0.wilt-1 .daisy-growth-sprite{transform:rotate(10deg)}.daisy-wilt-early.stage-0.wilt-2 .daisy-growth-sprite{transform:rotate(18deg)}.daisy-wilt-early.stage-0.wilt-3 .daisy-growth-sprite{transform:rotate(26deg)}
+.daisy-wilt-early.stage-1.wilt-1 .daisy-growth-sprite{transform:rotate(25deg)}.daisy-wilt-early.stage-1.wilt-2 .daisy-growth-sprite{transform:rotate(38deg)}.daisy-wilt-early.stage-1.wilt-3 .daisy-growth-sprite{transform:rotate(50deg)}
+.daisy-wilt-early.stage-2.wilt-1 .daisy-growth-sprite{transform:rotate(18deg)}.daisy-wilt-early.stage-2.wilt-2 .daisy-growth-sprite{transform:rotate(30deg)}.daisy-wilt-early.stage-2.wilt-3 .daisy-growth-sprite{transform:rotate(42deg)}
+.daisy-wilt-early.stage-3.wilt-1 .daisy-growth-sprite{transform:rotate(18deg)}.daisy-wilt-early.stage-3.wilt-2 .daisy-growth-sprite{transform:rotate(30deg)}.daisy-wilt-early.stage-3.wilt-3 .daisy-growth-sprite{transform:rotate(42deg)}
+.daisy-shared-growth.wilt-1 .daisy-shared-plant{transform:rotate(18deg)}.daisy-shared-growth.wilt-2 .daisy-shared-plant{transform:rotate(30deg)}.daisy-shared-growth.wilt-3 .daisy-shared-plant{transform:rotate(40deg)}
+.daisy-mature-drawing{position:absolute;z-index:1;left:50%;bottom:13px;width:min(76%,260px);aspect-ratio:1;transform:translateX(-50%);pointer-events:none}.daisy-mature-drawing img{display:block;width:100%;height:100%;object-fit:contain}
+.daisy-scene.stage-6.wilt-1 .daisy-mature-drawing{filter:sepia(.58) saturate(.9) brightness(.94);transform:translateX(-50%) rotate(18deg);transform-origin:50% 100%}/* Hand-redrawn dry states use three original-composition panels; only leaf/petal texture changes. */
+.daisy-hand-wilt{position:absolute;z-index:1;left:50%;bottom:13px;transform:translateX(-50%);aspect-ratio:1;overflow:visible;pointer-events:none}
+.daisy-hand-wilt.stage-0{width:min(36%,128px)}.daisy-hand-wilt.stage-1{width:min(46%,160px)}.daisy-hand-wilt.stage-2{width:min(60%,205px)}.daisy-hand-wilt.stage-3{width:min(68%,230px)}.daisy-hand-wilt.stage-4{width:min(70%,240px);bottom:26px}.daisy-hand-wilt.stage-5{width:min(76%,260px)}
+.daisy-wilt-strip-frame{position:absolute;inset:0;background-image:var(--wilt-image);background-repeat:no-repeat;background-size:300% 100%;background-position-x:var(--wilt-panel)}

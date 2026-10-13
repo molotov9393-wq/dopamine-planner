@@ -5,6 +5,8 @@ const localDevelopment=location.hostname==='127.0.0.1'||location.hostname==='loc
 const developmentVersion=new URL(document.currentScript?.src||location.href).searchParams.get('v')||'87';
 if(localDevelopment&&localStorage.getItem('planner-development-version')!==developmentVersion){localStorage.setItem(KEY,JSON.stringify({...initial,started:true,page:'garden',dopamine:999}));localStorage.setItem('planner-development-version',developmentVersion)}
 let state;try{state={...initial,...JSON.parse(localStorage.getItem(KEY)||'{}')}}catch{state={...initial}};const storedWaterAt=Number(state.daisy?.lastWaterAt);state.daisy={fed:Math.max(0,Number(state.daisy?.fed)||0),lastWaterAt:Number.isFinite(storedWaterAt)&&storedWaterAt>0?Math.min(storedWaterAt,Date.now()):Date.now()};if(!Number.isFinite(storedWaterAt)||storedWaterAt<=0)localStorage.setItem(KEY,JSON.stringify(state));
+// Restore the gentle default once; later theme choices remain persistent.
+if(state.themePreferenceVersion!==1){state.theme='standard';state.themePreferenceVersion=1;localStorage.setItem(KEY,JSON.stringify(state))}
 const uiPop=new Audio('./assets/sounds/minimal-pop-click-ui-1.mp3');uiPop.preload='auto';uiPop.volume=.22;
 function playUiSound(){if(state.soundEnabled===false)return;uiPop.currentTime=0;uiPop.play().catch(()=>{})}
 document.addEventListener('click',event=>{
@@ -116,5 +118,6 @@ syncReminderTimer();syncAndroidPlannerNotifications();
 
 
 function refreshDaisyThirst(){if(document.hidden||state.page!=='garden'||new URLSearchParams(location.search).has('daisyWiltPreview'))return;const scene=document.querySelector('.daisy-scene');if(scene&&!scene.classList.contains('is-watering')&&Number(scene.dataset.wiltLevel)!==daisyWiltLevel())render()}window.setInterval(refreshDaisyThirst,60000);window.addEventListener('focus',refreshDaisyThirst);document.addEventListener('visibilitychange',refreshDaisyThirst);
+
 
 

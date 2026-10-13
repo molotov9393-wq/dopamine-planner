@@ -63,3 +63,167 @@ body[data-theme="cow"] .hero-flower-wrap>.cow-flower-upper-left{left:calc(50% - 
 body[data-theme="cow"] .hero-flower-wrap>.cow-flower-upper-right{left:calc(50% + 89px);top:9px;width:27px;height:22px;transform:rotate(62deg)}
 body[data-theme="cow"] .cow-section-marks .cow-spot:last-child{left:8%;top:0;width:24px;height:26px;transform:rotate(-22deg)}
 @media(max-width:400px){body[data-theme="cow"] .hero .cow-date-spot{right:22%}body[data-theme="cow"] .hero-flower-wrap>.cow-flower-upper-right{left:calc(50% + 83px);width:23px}}
+
+.theme-choice[data-theme-choice="guinea"]{grid-column:1/-1}
+.theme-swatch.guinea{background:#fff5e6 url('./assets/themes/guinea/face-ginger.png') center/30px no-repeat}
+body[data-theme="guinea"]{--paper:#fff5e6;--paper2:#fffaf1;--ink:#583820;--muted:#846044;--pink:#b95d27;--pink-light:#f5d3aa;--green:#687348;--yellow:#da9b43;--line:#dfc19f;--shadow:0 8px 26px #7e492a0c;background:#ecd3b1;color:var(--ink)}
+body[data-theme="guinea"] .app-shell{background:#fff5e6}
+body[data-theme="guinea"] .card,body[data-theme="guinea"] .daisy-tamagotchi{position:relative;background:#fffaf1;border-color:#dfc19f;padding-top:49px}
+body[data-theme="guinea"] .card:before,body[data-theme="guinea"] .daisy-tamagotchi:before{content:"";position:absolute;inset:0 0 auto;height:34px;background:#fff5e6;border-radius:16px 16px 0 0;border-bottom:1px solid #dfc19f70;pointer-events:none}
+body[data-theme="guinea"] .theme-card-trim{position:absolute;top:0;left:50%;transform:translateX(-50%);width:min(240px,100%);height:34px;display:flex;justify-content:center;align-items:center;gap:clamp(15px,5vw,30px);padding:0;border:0;pointer-events:none}
+body[data-theme="guinea"] .theme-card-trim img{display:block;flex:none;width:28px;height:28px;object-fit:contain}
+body[data-theme="guinea"] .btn{background:#f5d3aa;color:#583820;box-shadow:inset 0 -2px #b95d2722}
+body[data-theme="guinea"] .btn.primary{background:#b95d27;color:#fffaf1;box-shadow:none}
+body[data-theme="guinea"] .bottom-nav{background:#fff5e6;border-color:#dfc19f;backdrop-filter:none}
+body[data-theme="guinea"] .bottom-nav button{color:#795238}
+body[data-theme="guinea"] .bottom-nav button.active{background:#f5d3aa;color:#75401f}
+body[data-theme="guinea"] .progress{background:#ead7bc}
+body[data-theme="guinea"] .progress span{background:#cc8c45}
+body[data-theme="guinea"] .sound-switch.is-on{background:#b95d27}
+body[data-theme="guinea"] .modal,body[data-theme="guinea"] .task-notes-modal{background:#fff5e6}
+body[data-theme="guinea"] .modal input,body[data-theme="guinea"] .modal select,body[data-theme="guinea"] .task-choice{background:#fffaf1;border-color:#dfc19f;color:#583820}
+body[data-theme="guinea"] .task-choice.selected{background:#ffe6c7;border-color:#b95d27}
+body[data-theme="guinea"] .task-selection-summary{background:#fae6cc;color:#754b30}
+body[data-theme="guinea"] .daisy-scene{background:#fff5e6;border-color:#dfc19f}
+body[data-theme="guinea"] .daisy-thirst-note{background:#f5dfc3;color:#805130}
+body[data-theme="guinea"] .pill{background:#f5dfc3;color:#754b30}
+body[data-theme="guinea"] .welcome-start{background:#b95d27!important;color:#fffaf1!important;border-color:#b95d27!important;box-shadow:0 4px 12px #9d552422!important}
+body[data-theme="guinea"] .cow-spot{display:block;position:absolute;pointer-events:none;background:url('./assets/themes/guinea/face-ginger.png') center/contain no-repeat}
+body[data-theme="guinea"] .cow-hero-marks{display:block;position:relative;height:40px;margin:0 0 3px}
+body[data-theme="guinea"] .cow-hero-marks .cow-spot:first-child{left:10%;top:0;width:38px;height:38px;transform:rotate(-8deg)}
+body[data-theme="guinea"] .cow-hero-marks .cow-spot:last-child{right:13%;top:4px;width:33px;height:33px;background-image:url('./assets/themes/guinea/face-tricolor.png');transform:rotate(9deg)}
+body[data-theme="guinea"] .hero .calendar-launch{position:relative}
+body[data-theme="guinea"] .hero .cow-date-spot{right:30%;top:50%;width:24px;height:22px;transform:translateY(-50%);background-image:url('./assets/themes/guinea/carrot.png')}
+body[data-theme="guinea"] .hero-flower-wrap>.cow-spot{width:clamp(32px,11vw,47px);height:47px;top:41px;left:6%;transform:rotate(-8deg);background-image:url('./assets/themes/guinea/face-cream.png')}
+body[data-theme="guinea"] .hero-flower-wrap>.cow-spot:last-child{left:auto;right:5%;top:78px;background-image:url('./assets/themes/guinea/face-fluffy-ginger.png');transform:rotate(8deg)}
+body[data-theme="guinea"] .hero-flower-wrap>.cow-flower-upper-left{left:calc(50% - 106px);top:0;width:34px;height:34px;background-image:url('./assets/themes/guinea/house.png')}
+body[data-theme="guinea"] .hero-flower-wrap>.cow-flower-upper-right{left:calc(50% + 84px);top:3px;width:30px;height:30px;background-image:url('./assets/themes/guinea/face-brown.png')}
+body[data-theme="guinea"] .cow-section-marks{display:block;position:relative;height:43px;margin-top:-8px}
+body[data-theme="guinea"] .cow-section-marks .cow-spot{left:62%;top:0;width:35px;height:40px;background-image:url('./assets/themes/guinea/lettuce.png')}
+body[data-theme="guinea"] .cow-section-marks .cow-spot:last-child{left:6%;top:5px;width:44px;height:32px;background-image:url('./assets/themes/guinea/sleep.png')}
+body[data-theme="guinea"] ::selection{background:#f5d3aa;color:#583820}
+@media(max-width:400px){body[data-theme="guinea"] .hero .cow-date-spot{right:20%}}
+
+.profile-theme-art{display:inline-block;width:112px;height:108px;object-fit:contain;vertical-align:middle}
+
+body[data-theme="cats"]{--paper:#f6f0e5;--paper2:#fffcf7;--ink:#4f3b2e;--muted:#806d5d;--pink:#826344;--pink-light:#e5d4bc;--green:#6a7655;--yellow:#a98a54;--line:#d8cab7;--shadow:0 8px 26px #7e492a0c;background:#ded4c5;color:var(--ink)}
+body[data-theme="cats"] .app-shell{background:#f6f0e5}
+body[data-theme="cats"] .card,body[data-theme="cats"] .daisy-tamagotchi{position:relative;background:#fffcf7;border-color:#d8cab7;padding-top:49px}
+body[data-theme="cats"] .card:before,body[data-theme="cats"] .daisy-tamagotchi:before{content:"";position:absolute;inset:0 0 auto;height:34px;background:#f6f0e5;border-radius:16px 16px 0 0;border-bottom:1px solid #d8cab770;pointer-events:none}
+body[data-theme="cats"] .theme-card-trim{position:absolute;top:0;left:50%;transform:translateX(-50%);width:min(240px,100%);height:34px;display:flex;justify-content:center;align-items:center;gap:clamp(15px,5vw,30px);padding:0;border:0;pointer-events:none}
+body[data-theme="cats"] .theme-card-trim img{display:block;flex:none;width:28px;height:28px;object-fit:contain}
+body[data-theme="cats"] .btn{background:#e5d4bc;color:#4f3b2e;box-shadow:inset 0 -2px #82634422}
+body[data-theme="cats"] .btn.primary{background:#826344;color:#fffcf7;box-shadow:none}
+body[data-theme="cats"] .bottom-nav{background:#f6f0e5;border-color:#d8cab7;backdrop-filter:none}
+body[data-theme="cats"] .bottom-nav button{color:#786451}
+body[data-theme="cats"] .bottom-nav button.active{background:#e5d4bc;color:#644b35}
+body[data-theme="cats"] .progress{background:#e4dbc9}
+body[data-theme="cats"] .progress span{background:#899071}
+body[data-theme="cats"] .sound-switch.is-on{background:#826344}
+body[data-theme="cats"] .modal,body[data-theme="cats"] .task-notes-modal{background:#f6f0e5}
+body[data-theme="cats"] .modal input,body[data-theme="cats"] .modal select,body[data-theme="cats"] .task-choice{background:#fffcf7;border-color:#d8cab7;color:#4f3b2e}
+body[data-theme="cats"] .task-choice.selected{background:#eee4d4;border-color:#826344}
+body[data-theme="cats"] .task-selection-summary{background:#eee4d4;color:#6a533f}
+body[data-theme="cats"] .daisy-scene{background:#f6f0e5;border-color:#d8cab7}
+body[data-theme="cats"] .daisy-thirst-note{background:#e9dfcf;color:#6a533f}
+body[data-theme="cats"] .pill{background:#e9dfcf;color:#6a533f}
+body[data-theme="cats"] .welcome-start{background:#826344!important;color:#fffcf7!important;border-color:#826344!important;box-shadow:0 4px 12px #9d552422!important}
+body[data-theme="cats"] .cow-spot{display:block;position:absolute;pointer-events:none;background:url('./assets/themes/cats-v2/siberian.png') center/contain no-repeat}
+body[data-theme="cats"] .cow-hero-marks{display:block;position:relative;height:40px;margin:0 0 3px}
+body[data-theme="cats"] .cow-hero-marks .cow-spot:first-child{left:10%;top:0;width:38px;height:38px;transform:rotate(-8deg)}
+body[data-theme="cats"] .cow-hero-marks .cow-spot:last-child{right:13%;top:4px;width:33px;height:33px;background-image:url('./assets/themes/cats-v2/british.png');transform:rotate(9deg)}
+body[data-theme="cats"] .hero .calendar-launch{position:relative}
+body[data-theme="cats"] .hero .cow-date-spot{right:30%;top:50%;width:24px;height:22px;transform:translateY(-50%);background-image:url('./assets/themes/cats-v2/yarn.png')}
+body[data-theme="cats"] .hero-flower-wrap>.cow-spot{width:clamp(32px,11vw,47px);height:47px;top:41px;left:6%;transform:rotate(-8deg);background-image:url('./assets/themes/cats-v2/persian.png')}
+body[data-theme="cats"] .hero-flower-wrap>.cow-spot:last-child{left:auto;right:5%;top:78px;background-image:url('./assets/themes/cats-v2/maine-coon.png');transform:rotate(8deg)}
+body[data-theme="cats"] .hero-flower-wrap>.cow-flower-upper-left{left:calc(50% - 106px);top:0;width:34px;height:34px;background-image:url('./assets/themes/cats-v2/house.png')}
+body[data-theme="cats"] .hero-flower-wrap>.cow-flower-upper-right{left:calc(50% + 84px);top:3px;width:30px;height:30px;background-image:url('./assets/themes/cats-v2/ragdoll.png')}
+body[data-theme="cats"] .cow-section-marks{display:block;position:relative;height:43px;margin-top:-8px}
+body[data-theme="cats"] .cow-section-marks .cow-spot{left:62%;top:0;width:35px;height:40px;background-image:url('./assets/themes/cats-v2/maine-coon-seated.png')}
+body[data-theme="cats"] .cow-section-marks .cow-spot:last-child{left:6%;top:5px;width:44px;height:32px;background-image:url('./assets/themes/cats-v2/sleep.png')}
+body[data-theme="cats"] ::selection{background:#e5d4bc;color:#4f3b2e}
+@media(max-width:400px){body[data-theme="cats"] .hero .cow-date-spot{right:20%}}
+.theme-swatch.cats{background:#f6f0e5 url('./assets/themes/cats-v2/siberian.png') center/30px no-repeat}
+.theme-choice[data-theme-choice="guinea"],.theme-choice[data-theme-choice="cats"]{grid-column:auto}
+@media(max-width:440px){.theme-choice{flex-direction:column;justify-content:center;gap:5px;text-align:center}}
+body[data-theme="dogs"]{--paper:#f8efe4;--paper2:#fff9f1;--ink:#5b3826;--muted:#88644b;--pink:#9c572f;--pink-light:#edcfb4;--green:#697650;--yellow:#b49154;--line:#ddc3ad;--shadow:0 8px 26px #7e492a0c;background:#e6ccb6;color:var(--ink)}
+body[data-theme="dogs"] .app-shell{background:#f8efe4}
+body[data-theme="dogs"] .card,body[data-theme="dogs"] .daisy-tamagotchi{position:relative;background:#fff9f1;border-color:#ddc3ad;padding-top:49px}
+body[data-theme="dogs"] .card:before,body[data-theme="dogs"] .daisy-tamagotchi:before{content:"";position:absolute;inset:0 0 auto;height:34px;background:#f8efe4;border-radius:16px 16px 0 0;border-bottom:1px solid #ddc3ad70;pointer-events:none}
+body[data-theme="dogs"] .theme-card-trim{position:absolute;top:0;left:50%;transform:translateX(-50%);width:min(240px,100%);height:34px;display:flex;justify-content:center;align-items:center;gap:clamp(15px,5vw,30px);padding:0;border:0;pointer-events:none}
+body[data-theme="dogs"] .theme-card-trim img{display:block;flex:none;width:28px;height:28px;object-fit:contain}
+body[data-theme="dogs"] .btn{background:#edcfb4;color:#5b3826;box-shadow:inset 0 -2px #9c572f22}
+body[data-theme="dogs"] .btn.primary{background:#9c572f;color:#fff9f1;box-shadow:none}
+body[data-theme="dogs"] .bottom-nav{background:#f8efe4;border-color:#ddc3ad;backdrop-filter:none}
+body[data-theme="dogs"] .bottom-nav button{color:#80614c}
+body[data-theme="dogs"] .bottom-nav button.active{background:#edcfb4;color:#734329}
+body[data-theme="dogs"] .progress{background:#e7d6c1}
+body[data-theme="dogs"] .progress span{background:#7c9169}
+body[data-theme="dogs"] .sound-switch.is-on{background:#9c572f}
+body[data-theme="dogs"] .modal,body[data-theme="dogs"] .task-notes-modal{background:#f8efe4}
+body[data-theme="dogs"] .modal input,body[data-theme="dogs"] .modal select,body[data-theme="dogs"] .task-choice{background:#fff9f1;border-color:#ddc3ad;color:#5b3826}
+body[data-theme="dogs"] .task-choice.selected{background:#f3e2ce;border-color:#9c572f}
+body[data-theme="dogs"] .task-selection-summary{background:#f3e2ce;color:#79563e}
+body[data-theme="dogs"] .daisy-scene{background:#f8efe4;border-color:#ddc3ad}
+body[data-theme="dogs"] .daisy-thirst-note{background:#eddbc6;color:#79563e}
+body[data-theme="dogs"] .pill{background:#eddbc6;color:#79563e}
+body[data-theme="dogs"] .welcome-start{background:#9c572f!important;color:#fff9f1!important;border-color:#9c572f!important;box-shadow:0 4px 12px #9d552422!important}
+body[data-theme="dogs"] .cow-spot{display:block;position:absolute;pointer-events:none;background:url('./assets/themes/dogs/cavalier.png') center/contain no-repeat}
+body[data-theme="dogs"] .cow-hero-marks{display:block;position:relative;height:40px;margin:0 0 3px}
+body[data-theme="dogs"] .cow-hero-marks .cow-spot:first-child{left:10%;top:0;width:38px;height:38px;transform:rotate(-8deg)}
+body[data-theme="dogs"] .cow-hero-marks .cow-spot:last-child{right:13%;top:4px;width:33px;height:33px;background-image:url('./assets/themes/dogs/labrador.png');transform:rotate(9deg)}
+body[data-theme="dogs"] .hero .calendar-launch{position:relative}
+body[data-theme="dogs"] .hero .cow-date-spot{right:30%;top:50%;width:24px;height:22px;transform:translateY(-50%);background-image:url('./assets/themes/dogs/ball.png')}
+body[data-theme="dogs"] .hero-flower-wrap>.cow-spot{width:clamp(32px,11vw,47px);height:47px;top:41px;left:6%;transform:rotate(-8deg);background-image:url('./assets/themes/dogs/corgi.png')}
+body[data-theme="dogs"] .hero-flower-wrap>.cow-spot:last-child{left:auto;right:5%;top:78px;background-image:url('./assets/themes/dogs/spitz.png');transform:rotate(8deg)}
+body[data-theme="dogs"] .hero-flower-wrap>.cow-flower-upper-left{left:calc(50% - 106px);top:0;width:34px;height:34px;background-image:url('./assets/themes/dogs/house.png')}
+body[data-theme="dogs"] .hero-flower-wrap>.cow-flower-upper-right{left:calc(50% + 84px);top:3px;width:30px;height:30px;background-image:url('./assets/themes/dogs/poodle.png')}
+body[data-theme="dogs"] .cow-section-marks{display:block;position:relative;height:43px;margin-top:-8px}
+body[data-theme="dogs"] .cow-section-marks .cow-spot{left:62%;top:0;width:35px;height:40px;background-image:url('./assets/themes/dogs/corgi-seated.png')}
+body[data-theme="dogs"] .cow-section-marks .cow-spot:last-child{left:6%;top:5px;width:44px;height:32px;background-image:url('./assets/themes/dogs/cavalier.png')}
+body[data-theme="dogs"] ::selection{background:#edcfb4;color:#5b3826}
+@media(max-width:400px){body[data-theme="dogs"] .hero .cow-date-spot{right:20%}}
+.theme-swatch.dogs{background:#f8efe4 url('./assets/themes/dogs/cavalier.png') center/30px no-repeat}
+.theme-choice[data-theme-choice="dogs"]{grid-column:1/-1;flex-direction:row}
+body[data-theme="hamsters"]{--paper:#fff3df;--paper2:#fffaf0;--ink:#633e26;--muted:#806044;--pink:#a45e23;--pink-light:#f2d39d;--green:#697650;--yellow:#b49154;--line:#dfc39c;--shadow:0 8px 26px #7e492a0c;background:#ebd3ae;color:var(--ink)}
+body[data-theme="hamsters"] .app-shell{background:#fff3df}
+body[data-theme="hamsters"] .card,body[data-theme="hamsters"] .daisy-tamagotchi{position:relative;background:#fffaf0;border-color:#dfc39c;padding-top:49px}
+body[data-theme="hamsters"] .card:before,body[data-theme="hamsters"] .daisy-tamagotchi:before{content:"";position:absolute;inset:0 0 auto;height:34px;background:#fff3df;border-radius:16px 16px 0 0;border-bottom:1px solid #dfc39c70;pointer-events:none}
+body[data-theme="hamsters"] .theme-card-trim{position:absolute;top:0;left:50%;transform:translateX(-50%);width:min(240px,100%);height:34px;display:flex;justify-content:center;align-items:center;gap:clamp(15px,5vw,30px);padding:0;border:0;pointer-events:none}
+body[data-theme="hamsters"] .theme-card-trim img{display:block;flex:none;width:28px;height:28px;object-fit:contain}
+body[data-theme="hamsters"] .btn{background:#f2d39d;color:#633e26;box-shadow:inset 0 -2px #a45e2322}
+body[data-theme="hamsters"] .btn.primary{background:#a45e23;color:#fffaf0;box-shadow:none}
+body[data-theme="hamsters"] .bottom-nav{background:#fff3df;border-color:#dfc39c;backdrop-filter:none}
+body[data-theme="hamsters"] .bottom-nav button{color:#80614c}
+body[data-theme="hamsters"] .bottom-nav button.active{background:#f2d39d;color:#734329}
+body[data-theme="hamsters"] .progress{background:#e7d6c1}
+body[data-theme="hamsters"] .progress span{background:#7c9169}
+body[data-theme="hamsters"] .sound-switch.is-on{background:#a45e23}
+body[data-theme="hamsters"] .modal,body[data-theme="hamsters"] .task-notes-modal{background:#fff3df}
+body[data-theme="hamsters"] .modal input,body[data-theme="hamsters"] .modal select,body[data-theme="hamsters"] .task-choice{background:#fffaf0;border-color:#dfc39c;color:#633e26}
+body[data-theme="hamsters"] .task-choice.selected{background:#f8e8cc;border-color:#a45e23}
+body[data-theme="hamsters"] .task-selection-summary{background:#f8e8cc;color:#79563e}
+body[data-theme="hamsters"] .daisy-scene{background:#fff3df;border-color:#dfc39c}
+body[data-theme="hamsters"] .daisy-thirst-note{background:#f4dfbb;color:#79563e}
+body[data-theme="hamsters"] .pill{background:#f4dfbb;color:#79563e}
+body[data-theme="hamsters"] .welcome-start{background:#a45e23!important;color:#fffaf0!important;border-color:#a45e23!important;box-shadow:0 4px 12px #9d552422!important}
+body[data-theme="hamsters"] .cow-spot{display:block;position:absolute;pointer-events:none;background:url('./assets/themes/hamsters/seed.png') center/contain no-repeat}
+body[data-theme="hamsters"] .cow-hero-marks{display:block;position:relative;height:40px;margin:0 0 3px}
+body[data-theme="hamsters"] .cow-hero-marks .cow-spot:first-child{left:10%;top:0;width:38px;height:38px;transform:rotate(-8deg)}
+body[data-theme="hamsters"] .cow-hero-marks .cow-spot:last-child{right:13%;top:4px;width:33px;height:33px;background-image:url('./assets/themes/hamsters/cinnamon-curious.png');transform:rotate(9deg)}
+body[data-theme="hamsters"] .hero .calendar-launch{position:relative}
+body[data-theme="hamsters"] .hero .cow-date-spot{right:30%;top:50%;width:24px;height:22px;transform:translateY(-50%);background-image:url('./assets/themes/hamsters/cheeks.png')}
+body[data-theme="hamsters"] .hero-flower-wrap>.cow-spot{width:clamp(32px,11vw,47px);height:47px;top:41px;left:6%;transform:rotate(-8deg);background-image:url('./assets/themes/hamsters/golden-happy.png')}
+body[data-theme="hamsters"] .hero-flower-wrap>.cow-spot:last-child{left:auto;right:5%;top:78px;background-image:url('./assets/themes/hamsters/robo-wink.png');transform:rotate(8deg)}
+body[data-theme="hamsters"] .hero-flower-wrap>.cow-flower-upper-left{left:calc(50% - 106px);top:0;width:34px;height:34px;background-image:url('./assets/themes/hamsters/house.png')}
+body[data-theme="hamsters"] .hero-flower-wrap>.cow-flower-upper-right{left:calc(50% + 84px);top:3px;width:30px;height:30px;background-image:url('./assets/themes/hamsters/gray-sleepy.png')}
+body[data-theme="hamsters"] .cow-section-marks{display:block;position:relative;height:43px;margin-top:-8px}
+body[data-theme="hamsters"] .cow-section-marks .cow-spot{left:62%;top:0;width:35px;height:40px;background-image:url('./assets/themes/hamsters/chocolate-groom.png')}
+body[data-theme="hamsters"] .cow-section-marks .cow-spot:last-child{left:6%;top:5px;width:44px;height:32px;background-image:url('./assets/themes/hamsters/seed.png')}
+body[data-theme="hamsters"] ::selection{background:#f2d39d;color:#633e26}
+@media(max-width:400px){body[data-theme="hamsters"] .hero .cow-date-spot{right:20%}}
+.theme-swatch.hamsters{background:#fff3df url('./assets/themes/hamsters/seed.png') center/30px no-repeat}
+.theme-choice[data-theme-choice="hamsters"]{grid-column:1/-1;flex-direction:row}
+.theme-choice[data-theme-choice="dogs"],.theme-choice[data-theme-choice="hamsters"]{grid-column:auto}
+
+

@@ -218,8 +218,10 @@ body.modal-open{overflow:hidden;overscroll-behavior:none}
 .task-choice:active{transform:scale(.96)}
 .task-choice.selected{border-color:#d9869e;background:#f7e3e8;box-shadow:0 3px 9px #bd718820}
 .task-choice-art{width:44px;height:44px;object-fit:contain}
-.task-choice-name{width:100%;color:var(--muted);font:9px/1.24 Comfortaa,'Trebuchet MS',sans-serif;text-align:center;overflow-wrap:anywhere}
-.task-choice.selected .task-choice-name{color:#8f4f63;font-weight:700}
+.task-choice-name{display:none}
+.task-choice-custom-label{color:#8f4f63;font:9px/1.2 Comfortaa,'Trebuchet MS',sans-serif}
+.custom-plus-art svg{display:block;width:100%;height:100%;overflow:visible;fill:none;stroke:#aa796a;stroke-width:2.7;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 1px 1px #aa796a24)}
+.task-choice.selected .custom-plus-art svg{stroke:#a94f6d}
 .task-choice-tick{position:absolute;top:4px;right:5px;width:17px;height:17px;display:grid;place-items:center;border:1px solid #d9c7bc;border-radius:50%;background:#fffaf3;color:transparent;font:12px/1 Comfortaa,sans-serif}
 .task-choice.selected .task-choice-tick{border-color:#c87e91;background:#d9869e;color:white}
 .task-custom{margin:2px 0 9px;padding:9px 12px;border:1px solid var(--line);border-radius:13px;background:#fff9f260;color:var(--muted);font-size:11px}

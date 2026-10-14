@@ -418,3 +418,6 @@ body.reduce-motion .daisy-plant-svg{animation:none!important}
 .daisy-hand-wilt{position:absolute;z-index:1;left:50%;bottom:13px;transform:translateX(-50%);aspect-ratio:1;overflow:visible;pointer-events:none}
 .daisy-hand-wilt.stage-0{width:min(36%,128px)}.daisy-hand-wilt.stage-1{width:min(46%,160px)}.daisy-hand-wilt.stage-2{width:min(60%,205px)}.daisy-hand-wilt.stage-3{width:min(68%,230px)}.daisy-hand-wilt.stage-4{width:min(70%,240px);bottom:26px}.daisy-hand-wilt.stage-5{width:min(76%,260px)}
 .daisy-wilt-strip-frame{position:absolute;inset:0;background-image:var(--wilt-image);background-repeat:no-repeat;background-size:300% 100%;background-position-x:var(--wilt-panel)}
+
+.task-custom-hint{display:block;margin:5px 1px 13px;color:var(--muted);font-size:10px;line-height:1.45}.task-ready-label{margin-top:1px}
+

@@ -5,16 +5,16 @@
   <meta name="theme-color" content="#f7eee6"><meta name="description" content="Нежный планер заботы о себе: маленькие шаги, дофамин и свой цветущий сад.">
   <title>Дофаминовый планер</title><link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./icons/favicon-64.png" sizes="64x64" type="image/png"><link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Marck+Script&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css?v=7"><link rel="stylesheet" href="./illustrations.css?v=91"><link rel="stylesheet" href="./themes.css?v=16">
+  <link rel="stylesheet" href="./style.css?v=10"><link rel="stylesheet" href="./illustrations.css?v=145"><link rel="stylesheet" href="./themes.css?v=16">
 </head>
 <body>
   <div class="app-shell">
     <main id="app" aria-live="polite"></main>
     <nav class="bottom-nav" aria-label="Основная навигация">
-      <button data-page="today"><img class="nav-icon" src="./assets/ui-nav-icons/today-v1.png" alt="" aria-hidden="true"><span>Сегодня</span></button><button data-page="tasks"><img class="nav-icon" src="./assets/ui-nav-icons/tasks-v1.png" alt="" aria-hidden="true"><span>Задачи</span></button><button data-page="diary"><img class="nav-icon" src="./assets/ui-nav-icons/diary-v1.png" alt="" aria-hidden="true"><span>Дневник</span></button><button data-page="garden"><img class="nav-icon" src="./assets/ui-nav-icons/daisy-v1.png" alt="" aria-hidden="true"><span>Ромашка</span></button><button data-page="calendar"><img class="nav-icon" src="./assets/ui-nav-icons/calendar-v1.png" alt="" aria-hidden="true"><span>Календарь</span></button><button data-page="profile"><img class="nav-icon" src="./assets/ui-nav-icons/profile-v1.png" alt="" aria-hidden="true"><span>Профиль</span></button>
+      <button data-page="today"><img class="nav-icon" src="./assets/ui-nav-icons/today-v1.png" alt="" aria-hidden="true"><span>Сегодня</span></button><button data-page="tasks"><img class="nav-icon" src="./assets/ui-nav-icons/tasks-v1.png" alt="" aria-hidden="true"><span>Задачи</span></button><button data-page="diary"><img class="nav-icon" src="./assets/ui-nav-icons/diary-v1.png" alt="" aria-hidden="true"><span>Дневник</span></button><button data-page="calendar"><img class="nav-icon" src="./assets/ui-nav-icons/calendar-v1.png" alt="" aria-hidden="true"><span>Календарь</span></button><button data-page="profile"><img class="nav-icon" src="./assets/ui-nav-icons/profile-v1.png" alt="" aria-hidden="true"><span>Профиль</span></button>
     </nav>
   </div>
-  <div id="modal-root"></div><script src="./app.js?v=108&amp;theme=18" defer></script><script>if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js',{updateViaCache:'none'}).then(registration=>registration.update()).catch(()=>{}));</script>
+  <div id="modal-root"></div><script src="./app.js?v=125&amp;theme=20&amp;calendar=multi-1" defer></script><script>if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.getRegistration('./').then(registration=>registration||navigator.serviceWorker.register('./sw.js',{updateViaCache:'none'})).catch(()=>{}));</script>
 </body></html>
 
 

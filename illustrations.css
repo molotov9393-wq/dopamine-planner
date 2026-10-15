@@ -218,10 +218,16 @@ body.modal-open{overflow:hidden;overscroll-behavior:none}
 .task-choice:active{transform:scale(.96)}
 .task-choice.selected{border-color:#d9869e;background:#f7e3e8;box-shadow:0 3px 9px #bd718820}
 .task-choice-art{width:44px;height:44px;object-fit:contain}
-.task-choice-name{display:none}
+.task-choice-name{width:100%;color:var(--muted);font:9px/1.24 Comfortaa,'Trebuchet MS',sans-serif;text-align:center;overflow-wrap:anywhere}
+.task-choice.selected .task-choice-name{color:#8f4f63;font-weight:700}
+.task-choice-custom{border-style:dashed;border-color:#d99bad;background:#fff6f8}
 .task-choice-custom-label{color:#8f4f63;font:9px/1.2 Comfortaa,'Trebuchet MS',sans-serif}
 .custom-plus-art svg{display:block;width:100%;height:100%;overflow:visible;fill:none;stroke:#aa796a;stroke-width:2.7;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 1px 1px #aa796a24)}
 .task-choice.selected .custom-plus-art svg{stroke:#a94f6d}
+.custom-task-backdrop{z-index:12}
+.custom-task-modal{position:relative;padding-top:54px}
+.custom-task-modal .reminder-modal-close{left:18px;right:auto}
+.custom-icon-grid .task-choice{min-height:76px}
 .task-choice-tick{position:absolute;top:4px;right:5px;width:17px;height:17px;display:grid;place-items:center;border:1px solid #d9c7bc;border-radius:50%;background:#fffaf3;color:transparent;font:12px/1 Comfortaa,sans-serif}
 .task-choice.selected .task-choice-tick{border-color:#c87e91;background:#d9869e;color:white}
 .task-custom{margin:2px 0 9px;padding:9px 12px;border:1px solid var(--line);border-radius:13px;background:#fff9f260;color:var(--muted);font-size:11px}
@@ -386,6 +392,13 @@ body.reduce-motion .daisy-plant-svg{animation:none!important}
 
 /* One shared pencil stem/leaf frame across stages 3–8; only the flower head changes. */
 .daisy-shared-growth{position:absolute;z-index:1;left:50%;bottom:13px;width:min(76%,260px);aspect-ratio:1;transform:translateX(-50%)}.daisy-shared-plant{position:absolute;inset:0;transform-origin:50% 100%;animation:daisy-rooted-sway 3.7s ease-in-out infinite}.daisy-shared-stem{position:absolute;inset:0;background:url(./assets/doodles/daisy-growth-sprouts-v1.png) 100% 100%/200% 200% no-repeat;translate:-4.1% 7.5%;clip-path:inset(43% 0 0 0)}.daisy-shared-stem.with-closed-bud{clip-path:none}.daisy-flower-head{position:absolute;left:50%;bottom:49%;width:76%;height:auto;overflow:hidden;transform:translateX(-50%);transform-origin:50% 100%;scale:var(--head-scale,1);transition:scale .7s ease}.daisy-flower-head.opening-head{width:45%;aspect-ratio:600/510}.daisy-flower-head.mature-head{aspect-ratio:1254/1020}.daisy-scene.is-watering .daisy-shared-plant{animation:daisy-watered-rooted-sway .7s ease-in-out .65s 2 both}@media(prefers-reduced-motion:reduce){.daisy-shared-plant{animation:none!important}}body.reduce-motion .daisy-shared-plant{animation:none!important}
+.daisy-shared-growth.stage-4 .daisy-shared-stem{background-position:0 100%;translate:-8.9% 3%;clip-path:none}
+.hero .daisy-shared-growth.stage-4{bottom:3px}
+.hero .daisy-shared-growth.stage-2{bottom:4px}
+.hero .daisy-shared-growth.stage-3{bottom:4px}
+.hero .daisy-shared-growth.stage-5 .daisy-flower-head.mature-head{bottom:50%;width:70%}
+.hero .daisy-shared-growth.stage-5 .daisy-shared-stem{display:none}
+.hero .daisy-shared-growth.stage-5 .daisy-flower-head.complete-head{bottom:18px;width:100%;height:100%;aspect-ratio:1}
 
 /* Three drawn thirst states, anchored to the same soil and flower connection. */
 .daisy-wilt-base{position:absolute;inset:0;display:block;width:100%;height:100%;translate:0 7.5%;overflow:hidden;transform-origin:50% 92.5%}.daisy-wilt-early .daisy-wilt-base{animation:daisy-rooted-sway 5s ease-in-out infinite}.daisy-shared-stem.wilt-stem-connector{clip-path:inset(43% 45% 36% 45%)}.daisy-shared-stem.wilt-closed-head{clip-path:inset(0 0 57% 0);transform-origin:54.1% 43%}.wilt-1 .daisy-flower-head,.wilt-1 .wilt-closed-head{rotate:8deg;filter:saturate(.94)}.wilt-2 .daisy-flower-head,.wilt-2 .wilt-closed-head{rotate:18deg;filter:saturate(.84)}.wilt-3 .daisy-flower-head,.wilt-3 .wilt-closed-head{rotate:28deg;filter:saturate(.72)}.daisy-thirst-note{margin:11px 0 0;padding:9px 12px;border-radius:14px;background:#eadccf77;color:#967157;font:15px 'Marck Script',cursive;text-align:center}.daisy-scene.is-watering .daisy-wilt-early .daisy-wilt-base{animation:daisy-watered-rooted-sway .7s ease-in-out .65s 2 both}@media(prefers-reduced-motion:reduce){.daisy-wilt-base{animation:none!important}}body.reduce-motion .daisy-wilt-base{animation:none!important}
@@ -423,3 +436,98 @@ body.reduce-motion .daisy-plant-svg{animation:none!important}
 
 .task-custom-hint{display:block;margin:5px 1px 13px;color:var(--muted);font-size:10px;line-height:1.45}.task-ready-label{margin-top:1px}
 
+
+/* Compact the existing watering card inside the Today hero. */
+.hero .daisy-home-widget{width:100%;max-width:400px;margin:5px auto 0}
+.hero .daisy-tamagotchi{overflow:visible;margin:0;border:0;border-radius:0;background:transparent;box-shadow:none}
+.hero .daisy-scene{height:clamp(130px,36vw,160px);border-radius:0;background:transparent;overflow:visible}
+.hero .daisy-backlight{top:0;width:min(55%,145px);opacity:.5}
+.hero .daisy-ground-shadow{bottom:7px;width:min(36%,120px);height:16px}
+.hero .daisy-soil-art{bottom:-17px;width:min(44%,140px)}
+.hero .daisy-growing-art{bottom:0;width:min(48%,150px);height:92%}
+.hero .daisy-growing-art.opening{width:min(50%,155px);height:94%}
+.hero .daisy-bloom-art,.hero .daisy-shared-growth{bottom:0;width:min(50%,155px)}
+.hero .daisy-mature-drawing{bottom:4px;width:min(46%,145px)}
+.hero .daisy-whole-art-frame{top:0;height:100%;max-width:calc(100% - 12px)}
+.hero .daisy-care{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:2px 9px;padding:3px 5px 0}
+.hero .daisy-stage-copy{text-align:left;min-width:0}.hero .daisy-stage-copy>span{display:inline;font-size:8px}.hero .daisy-stage-copy h3{display:inline;margin:0 0 0 5px;font-size:16px}.hero .daisy-stage-copy p{display:none}
+
+
+.hero .daisy-progress{grid-column:1;grid-row:2;height:5px;margin:3px 0;border:0}
+.hero .daisy-progress-label{grid-column:2;grid-row:2;font-size:8px;white-space:nowrap}
+.hero .daisy-feed-row{grid-column:1/3;grid-row:3;gap:8px;margin:2px 0 0;padding:0;border:0}
+.hero .daisy-feed-row>span{font-size:9px}
+.hero .daisy-feed-row strong{font-size:11px}
+.hero .daisy-feed{min-height:32px;padding:0 12px;font-size:9px}
+.hero .daisy-feed-note{display:none}
+@media(max-width:380px){.hero .daisy-feed-row{gap:5px}.hero .daisy-feed{padding:0 9px;font-size:9px}.hero .daisy-care{padding-right:2px;padding-left:2px}}
+.hero .daisy-watering-art{top:-45%;right:-7%;width:clamp(138px,42vw,170px);z-index:8}
+
+/* Give the flower and its care controls a calm, readable rhythm on Today. */
+.hero .daisy-scene{height:clamp(150px,40vw,175px)}
+.hero .daisy-backlight{width:min(64%,165px)}
+.hero .daisy-ground-shadow{width:min(40%,132px);height:18px}
+.hero .daisy-soil-art{width:min(48%,150px)}
+.hero .daisy-growing-art{width:min(54%,170px);height:94%}
+.hero .daisy-growing-art.opening{width:min(58%,180px);height:96%}
+.hero .daisy-bloom-art,.hero .daisy-shared-growth{width:min(58%,180px)}
+.hero .daisy-mature-drawing{width:min(54%,170px)}
+.hero .daisy-hand-wilt{bottom:0;width:min(58%,180px)}
+.hero .daisy-whole-art-frame{top:0;height:100%}
+.hero .daisy-care{display:block;padding:4px 8px 0}
+.hero .daisy-stage-copy{text-align:center}
+.hero .daisy-stage-copy>span{display:none}
+.hero .daisy-stage-copy h3{display:block;margin:1px 0;font-size:19px}
+.hero .daisy-stage-copy p{display:block;margin:0;font-size:11px;line-height:1.3}
+.hero .daisy-progress{height:6px;margin:7px 2px 3px}
+.hero .daisy-progress-label{font-size:11px;text-align:center}
+.hero .daisy-feed-row{margin-top:8px;padding-top:8px;border-top:1px solid #e4d4c5}
+.hero .daisy-feed-row>span{font-size:11px}
+.hero .daisy-feed{min-height:38px;padding:0 14px;font-size:11px}
+.hero .daisy-watering-art{top:-56%;right:-7%;width:clamp(145px,43vw,175px);z-index:8}
+@media(max-width:380px){.hero .daisy-watering-art{right:-4%;width:min(44vw,158px)}.hero .daisy-feed-row{gap:6px}.hero .daisy-feed{padding:0 10px;font-size:9px}}
+.hero .daisy-stage-copy h3.daisy-home-quote{margin:18px 0 5px;font:19px/1.2 'Marck Script',cursive;color:#65564c}
+.hero .daisy-progress,.hero .daisy-progress-label{display:none}
+
+.daisy-growth-sprite.sprite-stage-0{translate:-4.3% -1.5%;transform-origin:54.3% 96.2%}
+.daisy-growth-sprite.sprite-stage-1{translate:-1.3% -1.5%;transform-origin:51.3% 96.2%}
+
+/* Keep every home-screen flower stage comfortably inside the scene. */
+.hero .daisy-growing-art,.hero .daisy-growing-art.opening{width:min(40%,130px);height:84%}
+.hero .daisy-bloom-art,.hero .daisy-shared-growth,.hero .daisy-hand-wilt{width:min(42%,138px)}
+.hero .daisy-mature-drawing{width:min(40%,130px)}
+.hero .daisy-whole-art-frame{top:8%;bottom:auto;height:84%;max-width:calc(100% - 28px)}
+
+/* On mature drawings, keep the leaf tips visible above the soil mound. */
+.daisy-scene.stage-6 .daisy-mature-drawing,.daisy-scene.stage-7 .daisy-mature-drawing{z-index:3}
+
+.daisy-scene.stage-6 .daisy-mature-drawing,.daisy-scene.stage-7 .daisy-mature-drawing{bottom:6px}
+.daisy-scene.stage-6 .daisy-soil-art,.daisy-scene.stage-7 .daisy-soil-art{bottom:-25px}
+
+/* A quiet, hand-drawn still life for the empty task list. */
+.empty{padding:20px 18px 24px}
+.empty-doodle{display:block;width:min(190px,62%);height:auto;aspect-ratio:2.3;object-fit:contain;margin:0 auto 5px}
+.empty>span{display:block}
+.small-steps-quote{display:flex;align-items:center;justify-content:center;gap:7px;margin:10px auto;color:var(--green);line-height:1.15;font-size:clamp(18px,5vw,21px)}
+.small-steps-quote>span{white-space:nowrap}
+.steps-art{display:block;flex:none;width:68px;height:38px;object-fit:contain;margin:0}
+.stat-doodle{display:inline-block;width:36px;height:36px;object-fit:contain;vertical-align:-10px;margin-left:1px}
+.stats>div{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;min-width:0;padding:8px 3px}
+.stats>div>small{display:flex;align-items:center;justify-content:center;min-height:18px;font:500 10px/1.25 Comfortaa,'Trebuchet MS',sans-serif;white-space:nowrap}
+.stats>div>strong{display:flex;align-items:center;justify-content:center;gap:3px;min-height:36px;margin-top:4px;font:24px/1 'Marck Script',cursive;white-space:nowrap}
+.stats .stat-doodle{width:31px;height:31px;vertical-align:middle;margin:0}
+
+/* On unmarked dates, the selected calendar day gets an open heart outline. */
+.calendar-day.selected:not(.day-work):not(.day-off){position:relative;isolation:isolate}
+.calendar-day.selected:not(.day-work):not(.day-off) .calendar-selection-heart{position:absolute;z-index:0;left:50%;top:50%;width:38px;height:38px;transform:translate(-50%,-50%);overflow:visible;pointer-events:none}.calendar-day.selected:not(.day-work):not(.day-off) .calendar-selection-heart path{fill:none;stroke:#d8819a;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.calendar-day.selected:not(.day-work):not(.day-off) .calendar-date-number{z-index:1;width:34px;height:34px;border:0!important;border-radius:0;background:transparent!important;color:#914c62;transform:none}
+.calendar-day.selected:not(.day-work):not(.day-off) .calendar-date-number{z-index:1;width:34px;height:34px;border:0!important;border-radius:0;background:transparent!important;color:#914c62;transform:none}
+
+/* A small graphite heart marks today inside a colored calendar heart. */
+.calendar-day.today.day-work .calendar-date-number,.calendar-day.today.day-off .calendar-date-number{z-index:2;color:#3f3833!important;text-shadow:none;font-weight:700}
+.calendar-day.today.day-work .calendar-today-inner-heart,.calendar-day.today.day-off .calendar-today-inner-heart{position:absolute;z-index:1;left:50%;top:50%;width:39px;height:40px;transform:translate(-50%,-53%);overflow:visible;pointer-events:none}
+.calendar-day.today.day-work .calendar-today-inner-heart path,.calendar-day.today.day-off .calendar-today-inner-heart path{fill:none;stroke:#51443d;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round;opacity:.88}
+.calendar-day.today.day-work .calendar-today-inner-heart .pencil-line-echo,.calendar-day.today.day-off .calendar-today-inner-heart .pencil-line-echo{stroke:#716258;stroke-width:.7;opacity:.72}
+
+
+/* Compact multi-date workflow for marking several calendar days at once. */
+.calendar-select-tools{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:38px;margin:-3px 2px 7px;color:#89786e;font:11px Comfortaa,sans-serif}.calendar-selection-count{font-size:11px}.calendar-select-toggle{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:36px;padding:7px 10px;border:1px solid #dfcbbf;border-radius:12px;background:#fffaf4;color:#775f55;font:11px Comfortaa,sans-serif;cursor:pointer;transition:background .16s,border-color .16s,transform .16s}.calendar-select-toggle svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}.calendar-select-toggle:active,.calendar-batch-button:active{transform:scale(.97)}.calendar-select-toggle.is-active{border-color:#dfa4b3;background:#f9e9ed;color:#915267}.calendar-select-toggle:focus-visible,.calendar-batch-button:focus-visible{outline:2px solid #cb7890;outline-offset:2px}.calendar-day.batch-selected:after{content:'✓';position:absolute;z-index:3;top:0;right:0;display:grid;place-items:center;width:15px;height:15px;border:1.5px solid var(--paper);border-radius:50%;background:#c97b93;color:#fff;font:9px/1 Comfortaa,sans-serif;pointer-events:none}.calendar-batch-panel{margin:8px 0 5px;padding:10px 11px;border:1px solid #e2cfc2;border-radius:13px;background:#fffaf5}.calendar-batch-summary{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px;color:#87766c;font:11px Comfortaa,sans-serif}.calendar-batch-summary strong{color:#65554c;font-weight:600;font-variant-numeric:tabular-nums}.calendar-batch-buttons{display:grid;grid-template-columns:1fr 1fr;gap:8px}.calendar-batch-button{min-height:42px;padding:8px 10px;border:1px solid #c9d7c0;border-radius:12px;background:#edf3e9;color:#4f7047;font:11px Comfortaa,sans-serif;cursor:pointer;transition:background .16s,border-color .16s,transform .16s}.calendar-batch-button.off{border-color:#e1c0c8;background:#fbf0f2;color:#985267}.calendar-batch-button:disabled{opacity:.46;cursor:default;transform:none}.calendar-batch-button.off:disabled,.calendar-batch-button.work:disabled{opacity:.46}

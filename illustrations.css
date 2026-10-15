@@ -535,3 +535,26 @@ body.reduce-motion .daisy-plant-svg{animation:none!important}
 .hero .stats small{font:12px/1.4 Comfortaa,'Trebuchet MS',sans-serif;color:var(--muted)}.hero .stats strong{font:500 19px/1.25 Comfortaa,'Trebuchet MS',sans-serif;font-variant-numeric:tabular-nums}.hero .daisy-feed-row>span{font:12px Comfortaa,'Trebuchet MS',sans-serif}.hero .daisy-feed-row strong{font-size:15px}.hero .daisy-feed{font:13px Comfortaa,'Trebuchet MS',sans-serif}@media(max-width:380px){.hero .stats small{font-size:11px}.hero .daisy-feed-row>span{font-size:11px}.hero .daisy-feed{font-size:12px}}
 .hero .stats>div>small{font:500 12px/1.35 Comfortaa,'Trebuchet MS',sans-serif;min-height:20px}.hero .stats>div>strong{font:500 19px/1.25 Comfortaa,'Trebuchet MS',sans-serif;font-variant-numeric:tabular-nums}@media(max-width:380px){.hero .stats>div>small{font-size:11px}}
 .app-shell main .stats>div>small{font:500 12px/1.35 Comfortaa,'Trebuchet MS',sans-serif;min-height:20px}.app-shell main .stats>div>strong{font:500 19px/1.25 Comfortaa,'Trebuchet MS',sans-serif;font-variant-numeric:tabular-nums}@media(max-width:380px){.app-shell main .stats>div>small{font-size:11px}}
+
+/* Keep ordinary copy and controls in the planner's readable UI typeface. */
+.app-shell main .daisy-feed-row>span{font:500 13px/1.35 Comfortaa,'Trebuchet MS',sans-serif}
+.app-shell main .daisy-feed-row strong{font:600 16px/1.2 Comfortaa,'Trebuchet MS',sans-serif}
+.app-shell main .daisy-feed{font:600 14px/1.25 Comfortaa,'Trebuchet MS',sans-serif}
+.app-shell main .btn.small{font:600 14px/1.25 Comfortaa,'Trebuchet MS',sans-serif}
+.app-shell main .day-type-choice{font:500 14px/1.35 Comfortaa,'Trebuchet MS',sans-serif}
+.app-shell main .calendar-mark-hint,.app-shell main .daisy-intro{font:400 13px/1.5 Comfortaa,'Trebuchet MS',sans-serif}
+.app-shell main .daisy-preview-notice{font:400 12px/1.4 Comfortaa,'Trebuchet MS',sans-serif}
+.app-shell main .welcome-kicker,.app-shell main .welcome-copy p{font-family:Comfortaa,'Trebuchet MS',sans-serif;transform:none}
+.app-shell main .welcome-kicker{font-size:14px;font-weight:600;line-height:1.4}
+.app-shell main .welcome-copy p{font-size:14px;line-height:1.55}
+.app-shell main .welcome-start{font:600 14px/1.25 Comfortaa,'Trebuchet MS',sans-serif!important;transform:none}
+.app-shell main .collection-welcome p{font:400 14px/1.5 Comfortaa,'Trebuchet MS',sans-serif}
+.app-shell main .collection-footnote{font:400 13px/1.5 Comfortaa,'Trebuchet MS',sans-serif}
+.app-shell main .animal-fact>span,.app-shell main .animal-secret span{font:500 12px/1.4 Comfortaa,'Trebuchet MS',sans-serif}
+.app-shell main .animal-detail p{font:400 14px/1.55 Comfortaa,'Trebuchet MS',sans-serif}
+.app-shell main .task-notes-modal .reminder-label{font:500 14px/1.4 Comfortaa,'Trebuchet MS',sans-serif}
+.app-shell main .task-note-footer{font:400 12px/1.4 Comfortaa,'Trebuchet MS',sans-serif}
+.app-shell main .task-notes-modal .btn{font:600 14px/1.25 Comfortaa,'Trebuchet MS',sans-serif;letter-spacing:0}
+.app-shell main .calendar-select-tools,.app-shell main .calendar-batch-summary{font:400 12px/1.4 Comfortaa,'Trebuchet MS',sans-serif}
+.app-shell main .calendar-select-toggle,.app-shell main .calendar-batch-button{font:600 12px/1.3 Comfortaa,'Trebuchet MS',sans-serif}
+@media(max-width:380px){.app-shell main .daisy-feed-row>span{font-size:12px}.app-shell main .daisy-feed{font-size:13px}.app-shell main .btn.small{font-size:13px}}

@@ -11,6 +11,7 @@ const entries = [
   'app.js',
   'style.css',
   'illustrations.css',
+  'themes.css',
   'farm3d.js',
   'flower.svg',
   'manifest.webmanifest',
